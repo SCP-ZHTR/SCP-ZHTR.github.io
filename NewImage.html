@@ -1,0 +1,31 @@
+<html>
+<head>
+    <script>
+        function createImage(){
+            let dateTime = new Date().getTime().toString(36);
+            let newImageURL="http://scp-zh-tr.wikidot.com/image:"+dateTime+"/#_editpage";
+            window.open(newImageURL);
+        }
+    </script>
+    <style>
+        #u-link{
+            padding:0.5em;
+            text-align: center;
+            font-size: 27px;
+            align-items: center;
+            color: #b01;
+            text-decoration: none;
+            background: transparent;
+            cursor: pointer;
+        }
+        #u-link:hover{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div id="u-link" onclick="createImage()">
+        <span>發布新圖片</span>
+    </div>
+</body>
+</html>
