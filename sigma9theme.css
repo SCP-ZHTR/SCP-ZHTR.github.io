@@ -1802,6 +1802,10 @@ padding-right: 0;
     float: right;
 }
 
+#search-top-box-input {
+    display: none;
+}
+
 .vomiter-only {
   color: green;
 }
