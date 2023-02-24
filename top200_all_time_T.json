@@ -1,21 +1,5 @@
 [
    {
-      "TITLE": "SCP-173 - 塑像 - 最初的作品",
-      "FULLNAME": "scp-173",
-      "RATING": 62,
-      "COMMENTS": "3",
-      "CREATED_AT": "1552989555",
-      "TAGs": [
-         "en",
-         "euclid",
-         "scp",
-         "塑像173",
-         "翻譯",
-         "自主",
-         "觀察影響"
-      ]
-   },
-   {
       "TITLE": "SCP格式資源",
       "FULLNAME": "scp-style-resource",
       "RATING": 32,
@@ -3652,6 +3636,21 @@
          "thanatomania",
          "故事",
          "翻譯"
+      ]
+   },
+   {
+      "TITLE": "SCP-2740-JP - 別在意別在意笑",
+      "FULLNAME": "scp-2740-jp",
+      "RATING": 10,
+      "COMMENTS": "0",
+      "CREATED_AT": "1605598585",
+      "TAGs": [
+         "jp",
+         "scp",
+         "機密分級",
+         "翻譯",
+         "誤傳部",
+         "載具"
       ]
    }
 ]
