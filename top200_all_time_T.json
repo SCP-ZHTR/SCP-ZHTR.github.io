@@ -1,5 +1,41 @@
 [
    {
+      "TITLE": "SCP-173 - 塑像 - 最初的作品",
+      "FULLNAME": "scp-173",
+      "RATING": 63,
+      "COMMENTS": "3",
+      "CREATED_AT": "1552989555",
+      "TAGs": [
+         "en",
+         "euclid",
+         "scp",
+         "塑像173",
+         "翻譯",
+         "自主",
+         "觀察影響"
+      ]
+   },
+   {
+      "TITLE": "SCP-3999 - 我為一切及我之事所包圍",
+      "FULLNAME": "scp-3999",
+      "RATING": 36,
+      "COMMENTS": "2",
+      "CREATED_AT": "1582002269",
+      "TAGs": [
+         "apollyon",
+         "en",
+         "en-3000",
+         "k級情景",
+         "meta",
+         "scp",
+         "卓文康卓奇",
+         "塔羅蘭研究員",
+         "概念",
+         "無效化",
+         "翻譯"
+      ]
+   },
+   {
       "TITLE": "SCP格式資源",
       "FULLNAME": "scp-style-resource",
       "RATING": 32,
@@ -3623,34 +3659,6 @@
          "攝像",
          "翻譯",
          "視覺性"
-      ]
-   },
-   {
-      "TITLE": "放棄死亡",
-      "FULLNAME": "abandoning-death",
-      "RATING": 10,
-      "COMMENTS": "1",
-      "CREATED_AT": "1605065937",
-      "TAGs": [
-         "jp",
-         "thanatomania",
-         "故事",
-         "翻譯"
-      ]
-   },
-   {
-      "TITLE": "SCP-2740-JP - 別在意別在意笑",
-      "FULLNAME": "scp-2740-jp",
-      "RATING": 10,
-      "COMMENTS": "0",
-      "CREATED_AT": "1605598585",
-      "TAGs": [
-         "jp",
-         "scp",
-         "機密分級",
-         "翻譯",
-         "誤傳部",
-         "載具"
       ]
    }
 ]
