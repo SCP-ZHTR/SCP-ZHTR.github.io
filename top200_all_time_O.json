@@ -969,21 +969,6 @@
       ]
    },
    {
-      "TITLE": "SCP-ZH-096 - 紅移破滅",
-      "FULLNAME": "scp-zh-096",
-      "RATING": 26,
-      "COMMENTS": "2",
-      "CREATED_AT": "1626000559",
-      "TAGs": [
-         "scp",
-         "sugoi博士",
-         "原創",
-         "展出",
-         "機密分級",
-         "逆模因"
-      ]
-   },
-   {
       "TITLE": "SCP-ZH-922 - 馬蘭姑娘",
       "FULLNAME": "scp-zh-922",
       "RATING": 26,
@@ -1139,6 +1124,21 @@
          "無形",
          "線上",
          "電腦"
+      ]
+   },
+   {
+      "TITLE": "SCP-ZH-096 - 紅移破滅",
+      "FULLNAME": "scp-zh-096",
+      "RATING": 25,
+      "COMMENTS": "2",
+      "CREATED_AT": "1626000559",
+      "TAGs": [
+         "scp",
+         "sugoi博士",
+         "原創",
+         "展出",
+         "機密分級",
+         "逆模因"
       ]
    },
    {
