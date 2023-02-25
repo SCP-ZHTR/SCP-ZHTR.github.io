@@ -841,6 +841,19 @@
       ]
    },
    {
+      "TITLE": "核方案",
+      "FULLNAME": "the-nuclear-option",
+      "RATING": 16,
+      "COMMENTS": "0",
+      "CREATED_AT": "1673630641",
+      "TAGs": [
+         "en",
+         "en-冷稿空降",
+         "故事",
+         "翻譯"
+      ]
+   },
+   {
       "TITLE": "SCP-1983 - 至無處之門",
       "FULLNAME": "scp-1983",
       "RATING": 15,
@@ -1011,19 +1024,6 @@
          "智能",
          "無形",
          "精神影響",
-         "翻譯"
-      ]
-   },
-   {
-      "TITLE": "核方案",
-      "FULLNAME": "the-nuclear-option",
-      "RATING": 15,
-      "COMMENTS": "0",
-      "CREATED_AT": "1673630641",
-      "TAGs": [
-         "en",
-         "en-冷稿空降",
-         "故事",
          "翻譯"
       ]
    },
