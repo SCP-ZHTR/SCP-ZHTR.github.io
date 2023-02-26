@@ -2353,6 +2353,25 @@
       ]
    },
    {
+      "TITLE": "SCP-7795 - Ð是「一三」",
+      "FULLNAME": "scp-7795",
+      "RATING": 12,
+      "COMMENTS": "0",
+      "CREATED_AT": "1675863494",
+      "TAGs": [
+         "en",
+         "scp",
+         "人形",
+         "復活",
+         "時間影響",
+         "智能",
+         "機密分級",
+         "死亡abc",
+         "活物",
+         "翻譯"
+      ]
+   },
+   {
       "TITLE": "魔法講座",
       "FULLNAME": "another-goddamn-magic-system",
       "RATING": 11,
@@ -3642,23 +3661,6 @@
          "火",
          "翻譯",
          "食物"
-      ]
-   },
-   {
-      "TITLE": "SCP-978 - 慾望相機",
-      "FULLNAME": "scp-978",
-      "RATING": 10,
-      "COMMENTS": "0",
-      "CREATED_AT": "1601999914",
-      "TAGs": [
-         "en",
-         "safe",
-         "scp",
-         "工具",
-         "心靈感應",
-         "攝像",
-         "翻譯",
-         "視覺性"
       ]
    }
 ]
