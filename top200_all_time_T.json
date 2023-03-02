@@ -1870,6 +1870,25 @@
       ]
    },
    {
+      "TITLE": "SCP-7795 - Ð是「一三」",
+      "FULLNAME": "scp-7795",
+      "RATING": 13,
+      "COMMENTS": "0",
+      "CREATED_AT": "1675863494",
+      "TAGs": [
+         "en",
+         "scp",
+         "人形",
+         "復活",
+         "時間影響",
+         "智能",
+         "機密分級",
+         "死亡abc",
+         "活物",
+         "翻譯"
+      ]
+   },
+   {
       "TITLE": "所以你想寫一個人形SCP項目",
       "FULLNAME": "so-you-want-to-write-a-humanoid-scp-object",
       "RATING": 12,
@@ -2349,25 +2368,6 @@
          "thaumiel",
          "二次翻譯",
          "基金會製造",
-         "翻譯"
-      ]
-   },
-   {
-      "TITLE": "SCP-7795 - Ð是「一三」",
-      "FULLNAME": "scp-7795",
-      "RATING": 12,
-      "COMMENTS": "0",
-      "CREATED_AT": "1675863494",
-      "TAGs": [
-         "en",
-         "scp",
-         "人形",
-         "復活",
-         "時間影響",
-         "智能",
-         "機密分級",
-         "死亡abc",
-         "活物",
          "翻譯"
       ]
    },
