@@ -296,6 +296,21 @@
       ]
    },
    {
+      "TITLE": "異常項目紀錄：「防暴警察頭盔」",
+      "FULLNAME": "anomalous-item-hk-police-helmet",
+      "RATING": 38,
+      "COMMENTS": "5",
+      "CREATED_AT": "1626757876",
+      "TAGs": [
+         "2021夏季競賽",
+         "site-zh-25",
+         "原創",
+         "國安十九局",
+         "故事",
+         "異常物品故事"
+      ]
+   },
+   {
       "TITLE": "你會感到後悔嗎？",
       "FULLNAME": "what-are-you-waiting-for-just-join-goc-dude",
       "RATING": 37,
@@ -329,21 +344,6 @@
          "概念",
          "機密分級",
          "研究員l.what"
-      ]
-   },
-   {
-      "TITLE": "異常項目紀錄：「防暴警察頭盔」",
-      "FULLNAME": "anomalous-item-hk-police-helmet",
-      "RATING": 37,
-      "COMMENTS": "5",
-      "CREATED_AT": "1626757876",
-      "TAGs": [
-         "2021夏季競賽",
-         "site-zh-25",
-         "原創",
-         "國安十九局",
-         "故事",
-         "異常物品故事"
       ]
    },
    {
@@ -3340,6 +3340,23 @@
       ]
    },
    {
+      "TITLE": "SCP-ZH-642 - 希望打火機",
+      "FULLNAME": "scp-zh-642",
+      "RATING": 18,
+      "COMMENTS": "0",
+      "CREATED_AT": "1576328859",
+      "TAGs": [
+         "scp",
+         "site-zh-16",
+         "人造物品",
+         "光",
+         "原創",
+         "展出",
+         "火",
+         "精神影響"
+      ]
+   },
+   {
       "TITLE": "Off Work",
       "FULLNAME": "pry",
       "RATING": 18,
@@ -3377,20 +3394,6 @@
          "原創",
          "展出",
          "死亡永生"
-      ]
-   },
-   {
-      "TITLE": "無夢之人是否會夢到明天的景色",
-      "FULLNAME": "dream-about-tomorrow",
-      "RATING": 18,
-      "COMMENTS": "5",
-      "CREATED_AT": "1588064103",
-      "TAGs": [
-         "reverberate博士",
-         "site-zh-81",
-         "原創",
-         "故事",
-         "航海學"
       ]
    }
 ]
