@@ -3168,6 +3168,24 @@
       ]
    },
    {
+      "TITLE": "SCP-ZH-243 - 楠梓百慕達",
+      "FULLNAME": "scp-zh-243",
+      "RATING": 19,
+      "COMMENTS": "0",
+      "CREATED_AT": "1627978565",
+      "TAGs": [
+         "2021夏季競賽",
+         "safe",
+         "scp",
+         "原創",
+         "展出",
+         "時間影響",
+         "民異署",
+         "認知危害",
+         "門徑"
+      ]
+   },
+   {
       "TITLE": "SCP-ZH-110 - 地板破了個洞",
       "FULLNAME": "scp-zh-110",
       "RATING": 19,
@@ -3382,19 +3400,6 @@
          "site-zh-16",
          "原創",
          "藝術作品"
-      ]
-   },
-   {
-      "TITLE": "如是我聞",
-      "FULLNAME": "wanderers:flowers-thus-have-i-heard",
-      "RATING": 18,
-      "COMMENTS": "0",
-      "CREATED_AT": "1583074203",
-      "TAGs": [
-         "wanderers",
-         "原創",
-         "展出",
-         "死亡永生"
       ]
    }
 ]
