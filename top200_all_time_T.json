@@ -395,6 +395,27 @@
       ]
    },
    {
+      "TITLE": "SCP-3001 - 紅色現實",
+      "FULLNAME": "scp-3001",
+      "RATING": 20,
+      "COMMENTS": "1",
+      "CREATED_AT": "1611316089",
+      "TAGs": [
+         "en",
+         "en-3000",
+         "euclid",
+         "scp",
+         "反物理定律",
+         "悖論",
+         "時空",
+         "時間影響",
+         "神經性",
+         "翻譯",
+         "記錄",
+         "超維度"
+      ]
+   },
+   {
       "TITLE": "我該怎樣把已發佈的文檔刪除？",
       "FULLNAME": "scp-309-j",
       "RATING": 19,
@@ -455,27 +476,6 @@
          "視覺性",
          "記憶影響",
          "認知危害"
-      ]
-   },
-   {
-      "TITLE": "SCP-3001 - 紅色現實",
-      "FULLNAME": "scp-3001",
-      "RATING": 19,
-      "COMMENTS": "1",
-      "CREATED_AT": "1611316089",
-      "TAGs": [
-         "en",
-         "en-3000",
-         "euclid",
-         "scp",
-         "反物理定律",
-         "悖論",
-         "時空",
-         "時間影響",
-         "神經性",
-         "翻譯",
-         "記錄",
-         "超維度"
       ]
    },
    {
@@ -1934,6 +1934,25 @@
       ]
    },
    {
+      "TITLE": "SCP-096 - 羞澀的人",
+      "FULLNAME": "scp-096",
+      "RATING": 12,
+      "COMMENTS": "0",
+      "CREATED_AT": "1584283362",
+      "TAGs": [
+         "dan博士",
+         "en",
+         "euclid",
+         "scp",
+         "人形",
+         "活物",
+         "羞澀的人",
+         "翻譯",
+         "視覺性",
+         "認知危害"
+      ]
+   },
+   {
       "TITLE": "SCP-2845 - 鹿神",
       "FULLNAME": "scp-2845",
       "RATING": 12,
@@ -2600,25 +2619,6 @@
       ]
    },
    {
-      "TITLE": "SCP-096 - 羞澀的人",
-      "FULLNAME": "scp-096",
-      "RATING": 11,
-      "COMMENTS": "0",
-      "CREATED_AT": "1584283362",
-      "TAGs": [
-         "dan博士",
-         "en",
-         "euclid",
-         "scp",
-         "人形",
-         "活物",
-         "羞澀的人",
-         "翻譯",
-         "視覺性",
-         "認知危害"
-      ]
-   },
-   {
       "TITLE": "Bright博士不再被允許使用時間異常回到過去以致得以殺死希特勒",
       "FULLNAME": "dr-bright-is-no-longer-allowed-to-use-temporal-anomalies",
       "RATING": 11,
@@ -2954,6 +2954,27 @@
          "中心",
          "翻譯",
          "進步研究院"
+      ]
+   },
+   {
+      "TITLE": "SCP-3309 - 逐漸消逝之際，我等何去何從",
+      "FULLNAME": "scp-3309",
+      "RATING": 11,
+      "COMMENTS": "1",
+      "CREATED_AT": "1619523492",
+      "TAGs": [
+         "en",
+         "k級情景",
+         "meta",
+         "scp",
+         "thaumiel",
+         "倫理委員會",
+         "合著",
+         "敘述性",
+         "本質促動",
+         "概念",
+         "研究員smalls",
+         "翻譯"
       ]
    },
    {
@@ -3638,30 +3659,6 @@
          "翻譯",
          "記憶影響",
          "電子"
-      ]
-   },
-   {
-      "TITLE": "SCP-666½-J",
-      "FULLNAME": "scp-666-and-a-half-j",
-      "RATING": 10,
-      "COMMENTS": "1",
-      "CREATED_AT": "1600743074",
-      "TAGs": [
-         "bright博士",
-         "clef博士",
-         "en",
-         "gears博士",
-         "keter",
-         "kondraki博士",
-         "k級情景",
-         "rights博士",
-         "scp",
-         "反熵",
-         "幻覺",
-         "搞笑",
-         "火",
-         "翻譯",
-         "食物"
       ]
    }
 ]
