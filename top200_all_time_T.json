@@ -1351,6 +1351,25 @@
       ]
    },
    {
+      "TITLE": "SCP-7795 - Ð是「一三」（Ðirteen）",
+      "FULLNAME": "scp-7795",
+      "RATING": 14,
+      "COMMENTS": "0",
+      "CREATED_AT": "1675863494",
+      "TAGs": [
+         "en",
+         "scp",
+         "人形",
+         "復活",
+         "時間影響",
+         "智能",
+         "機密分級",
+         "死亡abc",
+         "活物",
+         "翻譯"
+      ]
+   },
+   {
       "TITLE": "SCP-002 - 生「活」起居室",
       "FULLNAME": "scp-002",
       "RATING": 13,
@@ -1870,25 +1889,6 @@
       ]
    },
    {
-      "TITLE": "SCP-7795 - Ð是「一三」（Ðirteen）",
-      "FULLNAME": "scp-7795",
-      "RATING": 13,
-      "COMMENTS": "0",
-      "CREATED_AT": "1675863494",
-      "TAGs": [
-         "en",
-         "scp",
-         "人形",
-         "復活",
-         "時間影響",
-         "智能",
-         "機密分級",
-         "死亡abc",
-         "活物",
-         "翻譯"
-      ]
-   },
-   {
       "TITLE": "所以你想寫一個人形SCP項目",
       "FULLNAME": "so-you-want-to-write-a-humanoid-scp-object",
       "RATING": 12,
@@ -1972,6 +1972,18 @@
          "翻譯",
          "變形",
          "鹿類"
+      ]
+   },
+   {
+      "TITLE": "逆模因部中心頁",
+      "FULLNAME": "antimemetics-division-hub",
+      "RATING": 12,
+      "COMMENTS": "1",
+      "CREATED_AT": "1585559488",
+      "TAGs": [
+         "en",
+         "中心",
+         "翻譯"
       ]
    },
    {
@@ -2635,18 +2647,6 @@
       ]
    },
    {
-      "TITLE": "逆模因部中心頁",
-      "FULLNAME": "antimemetics-division-hub",
-      "RATING": 11,
-      "COMMENTS": "1",
-      "CREATED_AT": "1585559488",
-      "TAGs": [
-         "en",
-         "中心",
-         "翻譯"
-      ]
-   },
-   {
       "TITLE": "SCP-3008 - 一間毫無異狀的典型IKEA",
       "FULLNAME": "scp-3008",
       "RATING": 11,
@@ -3175,6 +3175,19 @@
       ]
    },
    {
+      "TITLE": "SCP驚選集中心頁",
+      "FULLNAME": "scp-anthology-hub",
+      "RATING": 11,
+      "COMMENTS": "1",
+      "CREATED_AT": "1669689134",
+      "TAGs": [
+         "en",
+         "中心",
+         "死亡abc",
+         "翻譯"
+      ]
+   },
+   {
       "TITLE": "SCP-7311 - 不安設施檔案",
       "FULLNAME": "scp-7311",
       "RATING": 11,
@@ -3214,6 +3227,19 @@
          "不可移動",
          "無效化",
          "玩具",
+         "翻譯"
+      ]
+   },
+   {
+      "TITLE": "如何安全召喚神祇",
+      "FULLNAME": "how-to-summon-a-god-safely",
+      "RATING": 11,
+      "COMMENTS": "0",
+      "CREATED_AT": "1678359646",
+      "TAGs": [
+         "en",
+         "展出",
+         "故事",
          "翻譯"
       ]
    },
@@ -3621,44 +3647,6 @@
          "合作",
          "翻譯",
          "資源"
-      ]
-   },
-   {
-      "TITLE": "Clef與Dimitri上路了",
-      "FULLNAME": "clef-and-dimitri-hit-the-road",
-      "RATING": 10,
-      "COMMENTS": "0",
-      "CREATED_AT": "1596641656",
-      "TAGs": [
-         "clef博士",
-         "en",
-         "glass博士",
-         "strelnikov特工",
-         "yoric特工",
-         "全球超自然聯盟",
-         "合著",
-         "故事",
-         "翻譯"
-      ]
-   },
-   {
-      "TITLE": "SCP-",
-      "FULLNAME": "scp-5251",
-      "RATING": 10,
-      "COMMENTS": "0",
-      "CREATED_AT": "1598543292",
-      "TAGs": [
-         "en",
-         "meta",
-         "safe",
-         "scp",
-         "傳染性",
-         "家電用品",
-         "相嘯魔",
-         "知識",
-         "翻譯",
-         "記憶影響",
-         "電子"
       ]
    }
 ]
