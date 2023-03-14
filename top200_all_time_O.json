@@ -183,6 +183,17 @@
       ]
    },
    {
+      "TITLE": "我在萬物之中",
+      "FULLNAME": "arkwork-3999",
+      "RATING": 39,
+      "COMMENTS": "8",
+      "CREATED_AT": "1586704239",
+      "TAGs": [
+         "原創",
+         "藝術作品"
+      ]
+   },
+   {
       "TITLE": "SCP-ZH-111 - 自我中心",
       "FULLNAME": "scp-zh-111",
       "RATING": 39,
@@ -282,17 +293,6 @@
          "未收容",
          "生物性",
          "重寫"
-      ]
-   },
-   {
-      "TITLE": "我在萬物之中",
-      "FULLNAME": "arkwork-3999",
-      "RATING": 38,
-      "COMMENTS": "8",
-      "CREATED_AT": "1586704239",
-      "TAGs": [
-         "原創",
-         "藝術作品"
       ]
    },
    {
