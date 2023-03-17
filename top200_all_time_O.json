@@ -3333,6 +3333,20 @@
       ]
    },
    {
+      "TITLE": "SCP-ZH-922 馬蘭姑娘 藝作",
+      "FULLNAME": "scp-zh-922-fanart",
+      "RATING": 19,
+      "COMMENTS": "1",
+      "CREATED_AT": "1676940353",
+      "TAGs": [
+         "cidal-dongi",
+         "site-zh-44",
+         "原創",
+         "台灣原住民",
+         "藝術作品"
+      ]
+   },
+   {
       "TITLE": "站點綠化提案",
       "FULLNAME": "greening",
       "RATING": 18,
@@ -3389,23 +3403,6 @@
          "感染性",
          "研究員l.what",
          "繁廣"
-      ]
-   },
-   {
-      "TITLE": "SCP-ZH-642 - 希望打火機",
-      "FULLNAME": "scp-zh-642",
-      "RATING": 18,
-      "COMMENTS": "0",
-      "CREATED_AT": "1576328859",
-      "TAGs": [
-         "scp",
-         "site-zh-16",
-         "人造物品",
-         "光",
-         "原創",
-         "展出",
-         "火",
-         "精神影響"
       ]
    }
 ]
