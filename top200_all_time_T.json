@@ -3224,6 +3224,27 @@
       ]
    },
    {
+      "TITLE": "SCP-7579 - Ø是「ØRKESLØS」",
+      "FULLNAME": "scp-7579",
+      "RATING": 11,
+      "COMMENTS": "0",
+      "CREATED_AT": "1672229942",
+      "TAGs": [
+         "aiad",
+         "bold主任",
+         "euclid",
+         "mcdoctorate博士",
+         "old-ai",
+         "scp",
+         "廢除部",
+         "智能",
+         "死亡abc",
+         "翻譯",
+         "電子",
+         "電腦"
+      ]
+   },
+   {
       "TITLE": "SCP-7311 - 不安設施檔案",
       "FULLNAME": "scp-7311",
       "RATING": 11,
@@ -3634,19 +3655,6 @@
          "redtooth",
          "wanderers",
          "翻譯"
-      ]
-   },
-   {
-      "TITLE": "K級情景總表",
-      "FULLNAME": "k-class-complete-list",
-      "RATING": 10,
-      "COMMENTS": "0",
-      "CREATED_AT": "1595494193",
-      "TAGs": [
-         "en",
-         "合作",
-         "翻譯",
-         "資源"
       ]
    }
 ]
