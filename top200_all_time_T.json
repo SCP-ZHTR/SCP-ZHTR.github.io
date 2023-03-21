@@ -1889,6 +1889,20 @@
       ]
    },
    {
+      "TITLE": "機動特遣隊簡要列表",
+      "FULLNAME": "task-forces-complete-list",
+      "RATING": 12,
+      "COMMENTS": "4",
+      "CREATED_AT": "1553939195",
+      "TAGs": [
+         "en",
+         "合作",
+         "合著",
+         "翻譯",
+         "資源"
+      ]
+   },
+   {
       "TITLE": "所以你想寫一個人形SCP項目",
       "FULLNAME": "so-you-want-to-write-a-humanoid-scp-object",
       "RATING": 12,
@@ -2452,20 +2466,6 @@
          "翻譯",
          "蛇之手",
          "說明"
-      ]
-   },
-   {
-      "TITLE": "機動特遣隊簡要列表",
-      "FULLNAME": "task-forces-complete-list",
-      "RATING": 11,
-      "COMMENTS": "4",
-      "CREATED_AT": "1553939195",
-      "TAGs": [
-         "en",
-         "合作",
-         "合著",
-         "翻譯",
-         "資源"
       ]
    },
    {
