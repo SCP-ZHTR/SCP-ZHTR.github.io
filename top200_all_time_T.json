@@ -3198,6 +3198,40 @@
       ]
    },
    {
+      "TITLE": "SCP-6765 - 惡魔奧吉爾與瑪利德拉格血之王座",
+      "FULLNAME": "scp-6765",
+      "RATING": 11,
+      "COMMENTS": "0",
+      "CREATED_AT": "1662896768",
+      "TAGs": [
+         "en",
+         "keter",
+         "scp",
+         "人形",
+         "人造物品",
+         "地下",
+         "夜之子",
+         "家具",
+         "心靈感應",
+         "感知力",
+         "智能",
+         "歷史性",
+         "殆瓦",
+         "活物",
+         "無定形",
+         "猩紅之王",
+         "生物性",
+         "睡眠",
+         "石頭",
+         "結構物",
+         "翻譯",
+         "聽覺影響",
+         "記憶影響",
+         "認知危害",
+         "銘文"
+      ]
+   },
+   {
       "TITLE": "流浪者圖書館急救指南",
       "FULLNAME": "wanderers:a-wanderers-guide-to-first-aid-in-the-library",
       "RATING": 11,
@@ -3637,24 +3671,6 @@
          "故事",
          "翻譯",
          "說明"
-      ]
-   },
-   {
-      "TITLE": "妖精踢客",
-      "FULLNAME": "wanderers:kicker-of-elves",
-      "RATING": 10,
-      "COMMENTS": "0",
-      "CREATED_AT": "1593274109",
-      "TAGs": [
-         "cryptozoological",
-         "elrich",
-         "entry",
-         "fable",
-         "narrative",
-         "otherworldly",
-         "redtooth",
-         "wanderers",
-         "翻譯"
       ]
    }
 ]
