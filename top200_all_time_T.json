@@ -841,6 +841,29 @@
       ]
    },
    {
+      "TITLE": "SCP-7070 - 不凋",
+      "FULLNAME": "scp-7070",
+      "RATING": 16,
+      "COMMENTS": "0",
+      "CREATED_AT": "1660479714",
+      "TAGs": [
+         "en",
+         "en-7000",
+         "k級情景",
+         "light博士",
+         "scp",
+         "the-administrator",
+         "合著",
+         "基金會製造",
+         "星際",
+         "機密分級",
+         "毒性",
+         "翻譯",
+         "變形",
+         "電腦"
+      ]
+   },
+   {
       "TITLE": "核方案",
       "FULLNAME": "the-nuclear-option",
       "RATING": 16,
@@ -1025,29 +1048,6 @@
          "無形",
          "精神影響",
          "翻譯"
-      ]
-   },
-   {
-      "TITLE": "SCP-7070 - 不凋",
-      "FULLNAME": "scp-7070",
-      "RATING": 15,
-      "COMMENTS": "0",
-      "CREATED_AT": "1660479714",
-      "TAGs": [
-         "en",
-         "en-7000",
-         "k級情景",
-         "light博士",
-         "scp",
-         "the-administrator",
-         "合著",
-         "基金會製造",
-         "星際",
-         "機密分級",
-         "毒性",
-         "翻譯",
-         "變形",
-         "電腦"
       ]
    },
    {
