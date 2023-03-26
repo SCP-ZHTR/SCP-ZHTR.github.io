@@ -416,23 +416,9 @@
       ]
    },
    {
-      "TITLE": "我該怎樣把已發佈的文檔刪除？",
-      "FULLNAME": "scp-309-j",
-      "RATING": 19,
-      "COMMENTS": "0",
-      "CREATED_AT": "1558952778",
-      "TAGs": [
-         "en",
-         "scp",
-         "搞笑",
-         "機密分級",
-         "翻譯"
-      ]
-   },
-   {
       "TITLE": "SCP-049 - 瘟疫醫生",
       "FULLNAME": "scp-049",
-      "RATING": 19,
+      "RATING": 20,
       "COMMENTS": "2",
       "CREATED_AT": "1586148182",
       "TAGs": [
@@ -451,6 +437,20 @@
          "觸覺影響",
          "重寫",
          "音頻"
+      ]
+   },
+   {
+      "TITLE": "我該怎樣把已發佈的文檔刪除？",
+      "FULLNAME": "scp-309-j",
+      "RATING": 19,
+      "COMMENTS": "0",
+      "CREATED_AT": "1558952778",
+      "TAGs": [
+         "en",
+         "scp",
+         "搞笑",
+         "機密分級",
+         "翻譯"
       ]
    },
    {
