@@ -3322,23 +3322,6 @@
       ]
    },
    {
-      "TITLE": "SCP-963 - 不朽",
-      "FULLNAME": "scp-963",
-      "RATING": 10,
-      "COMMENTS": "0",
-      "CREATED_AT": "1556538898",
-      "TAGs": [
-         "bright博士",
-         "en",
-         "euclid",
-         "scp",
-         "精神影響",
-         "翻譯",
-         "記憶影響",
-         "飾品"
-      ]
-   },
-   {
       "TITLE": "SCP-076 -「亞伯」",
       "FULLNAME": "scp-076",
       "RATING": 10,
@@ -3671,6 +3654,24 @@
          "故事",
          "翻譯",
          "說明"
+      ]
+   },
+   {
+      "TITLE": "妖精踢客",
+      "FULLNAME": "wanderers:kicker-of-elves",
+      "RATING": 10,
+      "COMMENTS": "0",
+      "CREATED_AT": "1593274109",
+      "TAGs": [
+         "cryptozoological",
+         "elrich",
+         "entry",
+         "fable",
+         "narrative",
+         "otherworldly",
+         "redtooth",
+         "wanderers",
+         "翻譯"
       ]
    }
 ]
