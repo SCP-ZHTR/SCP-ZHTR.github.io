@@ -762,25 +762,9 @@
       ]
    },
    {
-      "TITLE": "炙熱的午後時光",
-      "FULLNAME": "the-ss-vs-ss",
-      "RATING": 29,
-      "COMMENTS": "19",
-      "CREATED_AT": "1620130918",
-      "TAGs": [
-         "semibreve博士",
-         "surge博士",
-         "willow特工",
-         "x博士",
-         "原創",
-         "地下街",
-         "故事"
-      ]
-   },
-   {
       "TITLE": "SCP-ZH-228 - 翠埔，1947。",
       "FULLNAME": "scp-zh-228",
-      "RATING": 29,
+      "RATING": 30,
       "COMMENTS": "7",
       "CREATED_AT": "1635955340",
       "TAGs": [
@@ -799,6 +783,22 @@
          "歷史性",
          "精神影響",
          "超維度"
+      ]
+   },
+   {
+      "TITLE": "炙熱的午後時光",
+      "FULLNAME": "the-ss-vs-ss",
+      "RATING": 29,
+      "COMMENTS": "19",
+      "CREATED_AT": "1620130918",
+      "TAGs": [
+         "semibreve博士",
+         "surge博士",
+         "willow特工",
+         "x博士",
+         "原創",
+         "地下街",
+         "故事"
       ]
    },
    {
@@ -1064,6 +1064,20 @@
       ]
    },
    {
+      "TITLE": "海棠依舊",
+      "FULLNAME": "lucid-dreams",
+      "RATING": 26,
+      "COMMENTS": "0",
+      "CREATED_AT": "1659774882",
+      "TAGs": [
+         "2022夏季競賽",
+         "site-zh-11",
+         "原創",
+         "故事",
+         "真紀博士"
+      ]
+   },
+   {
       "TITLE": "SCP-ZH-993 - 無知則自由",
       "FULLNAME": "scp-zh-993",
       "RATING": 26,
@@ -1276,20 +1290,6 @@
          "原創",
          "展出",
          "故事"
-      ]
-   },
-   {
-      "TITLE": "海棠依舊",
-      "FULLNAME": "lucid-dreams",
-      "RATING": 25,
-      "COMMENTS": "0",
-      "CREATED_AT": "1659774882",
-      "TAGs": [
-         "2022夏季競賽",
-         "site-zh-11",
-         "原創",
-         "故事",
-         "真紀博士"
       ]
    },
    {
