@@ -2,7 +2,7 @@
    {
       "TITLE": "SCP-ZH-105 - 不孝子",
       "FULLNAME": "scp-zh-105",
-      "RATING": 68,
+      "RATING": 69,
       "COMMENTS": "5",
       "CREATED_AT": "1562073797",
       "TAGs": [
@@ -240,6 +240,21 @@
       ]
    },
    {
+      "TITLE": "異常項目紀錄：「防暴警察頭盔」",
+      "FULLNAME": "anomalous-item-hk-police-helmet",
+      "RATING": 39,
+      "COMMENTS": "5",
+      "CREATED_AT": "1626757876",
+      "TAGs": [
+         "2021夏季競賽",
+         "site-zh-25",
+         "原創",
+         "國安十九局",
+         "故事",
+         "異常物品故事"
+      ]
+   },
+   {
       "TITLE": "k1s10r0d的提案 - IMMOLARI",
       "FULLNAME": "k1s10r0d-s-proposal",
       "RATING": 39,
@@ -315,21 +330,6 @@
          "未收容",
          "生物性",
          "重寫"
-      ]
-   },
-   {
-      "TITLE": "異常項目紀錄：「防暴警察頭盔」",
-      "FULLNAME": "anomalous-item-hk-police-helmet",
-      "RATING": 38,
-      "COMMENTS": "5",
-      "CREATED_AT": "1626757876",
-      "TAGs": [
-         "2021夏季競賽",
-         "site-zh-25",
-         "原創",
-         "國安十九局",
-         "故事",
-         "異常物品故事"
       ]
    },
    {
@@ -2106,7 +2106,8 @@
          "2022紅藍爭霸賽",
          "euclid",
          "scp",
-         "原創"
+         "原創",
+         "展出"
       ]
    },
    {
@@ -2875,6 +2876,7 @@
          "2022紅藍爭霸賽",
          "wanderers",
          "原創",
+         "展出",
          "故事"
       ]
    },
