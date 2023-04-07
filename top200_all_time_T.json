@@ -1063,6 +1063,25 @@
       ]
    },
    {
+      "TITLE": "SCP-7795 - Ð是「一三」（Ðirteen）",
+      "FULLNAME": "scp-7795",
+      "RATING": 15,
+      "COMMENTS": "0",
+      "CREATED_AT": "1675863494",
+      "TAGs": [
+         "en",
+         "scp",
+         "人形",
+         "復活",
+         "時間影響",
+         "智能",
+         "機密分級",
+         "死亡abc",
+         "活物",
+         "翻譯"
+      ]
+   },
+   {
       "TITLE": "「老梗項目構思」清單",
       "FULLNAME": "the-big-list-of-overdone-scp-cliches",
       "RATING": 14,
@@ -1366,25 +1385,6 @@
          "二次翻譯",
          "搞笑",
          "故事",
-         "翻譯"
-      ]
-   },
-   {
-      "TITLE": "SCP-7795 - Ð是「一三」（Ðirteen）",
-      "FULLNAME": "scp-7795",
-      "RATING": 14,
-      "COMMENTS": "0",
-      "CREATED_AT": "1675863494",
-      "TAGs": [
-         "en",
-         "scp",
-         "人形",
-         "復活",
-         "時間影響",
-         "智能",
-         "機密分級",
-         "死亡abc",
-         "活物",
          "翻譯"
       ]
    },
