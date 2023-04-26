@@ -2207,6 +2207,22 @@
       ]
    },
    {
+      "TITLE": "SCP-ZH-009 - 臺式早點",
+      "FULLNAME": "scp-zh-009",
+      "RATING": 21,
+      "COMMENTS": "4",
+      "CREATED_AT": "1555212195",
+      "TAGs": [
+         "safe",
+         "scp",
+         "site-zh-02",
+         "原創",
+         "地下街",
+         "熱量影響",
+         "食物"
+      ]
+   },
+   {
       "TITLE": "SCP-ZH-500-ARC",
       "FULLNAME": "scp-zh-500-arc",
       "RATING": 21,
@@ -2607,22 +2623,6 @@
          "生物危害",
          "遠己",
          "醫學性"
-      ]
-   },
-   {
-      "TITLE": "SCP-ZH-009 - 臺式早點",
-      "FULLNAME": "scp-zh-009",
-      "RATING": 20,
-      "COMMENTS": "4",
-      "CREATED_AT": "1555212195",
-      "TAGs": [
-         "safe",
-         "scp",
-         "site-zh-02",
-         "原創",
-         "地下街",
-         "熱量影響",
-         "食物"
       ]
    },
    {
