@@ -1696,6 +1696,22 @@
       ]
    },
    {
+      "TITLE": "SCP-ZH-048 - 劍與魔法與茶之魔手",
+      "FULLNAME": "scp-zh-048",
+      "RATING": 23,
+      "COMMENTS": "3",
+      "CREATED_AT": "1629644608",
+      "TAGs": [
+         "2021夏季競賽",
+         "keter",
+         "scp",
+         "原創",
+         "本質促動",
+         "液體",
+         "食物"
+      ]
+   },
+   {
       "TITLE": "SCP-ZH-082 - 小蜜蜂餐車",
       "FULLNAME": "scp-zh-082",
       "RATING": 23,
@@ -1992,22 +2008,6 @@
          "動物",
          "原創",
          "水棲"
-      ]
-   },
-   {
-      "TITLE": "SCP-ZH-048 - 劍與魔法與茶之魔手",
-      "FULLNAME": "scp-zh-048",
-      "RATING": 22,
-      "COMMENTS": "3",
-      "CREATED_AT": "1629644608",
-      "TAGs": [
-         "2021夏季競賽",
-         "keter",
-         "scp",
-         "原創",
-         "本質促動",
-         "液體",
-         "食物"
       ]
    },
    {
@@ -3190,6 +3190,27 @@
       ]
    },
    {
+      "TITLE": "SCP-ZH-046 - 巡山靈",
+      "FULLNAME": "scp-zh-046",
+      "RATING": 19,
+      "COMMENTS": "2",
+      "CREATED_AT": "1598963968",
+      "TAGs": [
+         "ijamea",
+         "metha博士",
+         "scp",
+         "site-zh-02",
+         "人形",
+         "原創",
+         "地點",
+         "建築物",
+         "心靈感應",
+         "智能",
+         "無效化",
+         "神異博覽會"
+      ]
+   },
+   {
       "TITLE": "一般與異常探勘講座",
       "FULLNAME": "how-to-survive-in-the-wild",
       "RATING": 19,
@@ -3406,18 +3427,6 @@
          "creepypasta",
          "原創",
          "故事"
-      ]
-   },
-   {
-      "TITLE": "但願我不再好命",
-      "FULLNAME": "toogoodtobetrue",
-      "RATING": 19,
-      "COMMENTS": "1",
-      "CREATED_AT": "1664898026",
-      "TAGs": [
-         "2022紅藍爭霸賽",
-         "原創",
-         "異視維基"
       ]
    }
 ]
