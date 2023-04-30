@@ -2714,6 +2714,18 @@
       ]
    },
    {
+      "TITLE": "記憶刪除手冊指南",
+      "FULLNAME": "amnestic-orientation-manual",
+      "RATING": 11,
+      "COMMENTS": "0",
+      "CREATED_AT": "1585650182",
+      "TAGs": [
+         "en",
+         "故事",
+         "翻譯"
+      ]
+   },
+   {
       "TITLE": "SCP-3041 - 紅刀",
       "FULLNAME": "scp-3041",
       "RATING": 11,
@@ -3610,18 +3622,6 @@
          "感知影響",
          "翻譯",
          "視覺性"
-      ]
-   },
-   {
-      "TITLE": "記憶刪除手冊指南",
-      "FULLNAME": "amnestic-orientation-manual",
-      "RATING": 10,
-      "COMMENTS": "0",
-      "CREATED_AT": "1585650182",
-      "TAGs": [
-         "en",
-         "故事",
-         "翻譯"
       ]
    },
    {
