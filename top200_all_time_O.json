@@ -639,23 +639,6 @@
       ]
    },
    {
-      "TITLE": "SCP-ZH-087 - 棄稿",
-      "FULLNAME": "scp-zh-087",
-      "RATING": 31,
-      "COMMENTS": "4",
-      "CREATED_AT": "1570961815",
-      "TAGs": [
-         "euclid",
-         "meta",
-         "scp",
-         "site-zh-44",
-         "人形",
-         "原創",
-         "敘述性",
-         "變形"
-      ]
-   },
-   {
       "TITLE": "Alicia女士",
       "FULLNAME": "scp-zh-774",
       "RATING": 31,
@@ -728,6 +711,23 @@
          "衣物",
          "觸覺影響",
          "認知危害"
+      ]
+   },
+   {
+      "TITLE": "SCP-ZH-087 - 棄稿",
+      "FULLNAME": "scp-zh-087",
+      "RATING": 30,
+      "COMMENTS": "4",
+      "CREATED_AT": "1570961815",
+      "TAGs": [
+         "euclid",
+         "meta",
+         "scp",
+         "site-zh-44",
+         "人形",
+         "原創",
+         "敘述性",
+         "變形"
       ]
    },
    {
