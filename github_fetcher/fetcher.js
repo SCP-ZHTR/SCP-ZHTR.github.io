@@ -47,8 +47,8 @@ function promiseFn(num, time = 500) {
   const URL_O_PIL = 'https://raw.githubusercontent.com/SCP-ZHTR/BackendStorage/main/Async_O_PIL_loop.json';
   const URL_T_UVT = 'https://raw.githubusercontent.com/SCP-ZHTR/BackendStorage/main/Async_T_UVT.json';
   const URL_O_UVT = 'https://raw.githubusercontent.com/SCP-ZHTR/BackendStorage/main/Async_O_UVT.json';
-  const URL_T_AR = 'https://raw.githubusercontent.com/SCP-ZHTR/BackendStorage/main/Async_T_Adjusted_Rating.json.json';
-  const URL_O_AR = 'https://raw.githubusercontent.com/SCP-ZHTR/BackendStorage/main/Async_O_Adjusted_Rating.json.json';
+  const URL_T_AR = 'https://raw.githubusercontent.com/SCP-ZHTR/BackendStorage/main/Async_T_Adjusted_Rating.json';
+  const URL_O_AR = 'https://raw.githubusercontent.com/SCP-ZHTR/BackendStorage/main/Async_O_Adjusted_Rating.json';
 
 
   async function main_fetch(){
