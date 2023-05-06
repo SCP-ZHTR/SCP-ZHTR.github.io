@@ -42,31 +42,36 @@ function promiseFn(num, time = 500) {
 
   }
 
+  const raw_url_root = 'https://raw.githubusercontent.com/SCP-ZHTR/BackendStorage/main/Async'
+  var URL_DICT = {}
+  var url_core
+  for (const genre of ['T','O']){
+    for (const key of ['PIL','UVT', 'AR']){
+      if(key == 'PIL') url_core = 'PIL_loop';
+      if(key == 'UVT') url_core = 'UVT';
+      if(key == 'AR') url_core = 'Adjusted_Rating';
+      URL_DICT[`${genre}_${key}`] = `${raw_url_root}_${genre}_${url_core}`
+    }
+  }
 
+  /*
   const URL_T_PIL = 'https://raw.githubusercontent.com/SCP-ZHTR/BackendStorage/main/Async_T_PIL_loop.json';
   const URL_O_PIL = 'https://raw.githubusercontent.com/SCP-ZHTR/BackendStorage/main/Async_O_PIL_loop.json';
   const URL_T_UVT = 'https://raw.githubusercontent.com/SCP-ZHTR/BackendStorage/main/Async_T_UVT.json';
   const URL_O_UVT = 'https://raw.githubusercontent.com/SCP-ZHTR/BackendStorage/main/Async_O_UVT.json';
   const URL_T_AR = 'https://raw.githubusercontent.com/SCP-ZHTR/BackendStorage/main/Async_T_Adjusted_Rating.json';
   const URL_O_AR = 'https://raw.githubusercontent.com/SCP-ZHTR/BackendStorage/main/Async_O_Adjusted_Rating.json';
+*/
+
+
 
 
   async function main_fetch(){
-    const t_pil = await getdata(URL_T_PIL)
-    const t_uvt = await getdata(URL_T_UVT)
-    const t_ar = await getdata(URL_T_AR)
-    const o_pil = await getdata(URL_O_PIL)
-    const o_uvt = await getdata(URL_O_UVT)
-    const o_ar = await getdata(URL_O_AR)
-    console.log('doing the fetch')
-    return {
-      'T_PIL' : t_pil,
-      'O_PIL' : o_pil,
-      'T_UVT' : t_uvt,
-      'O_UVT' : o_uvt,
-      'T_AR' : t_ar,
-      'O_AR' : o_ar
+    var data_dict = {}
+    for (const[key,url] of URL_DICT){
+      data_dict[key] = await getdata(url)
     }
+    return data_dict
   }
 
 export{main_fetch}
