@@ -68,7 +68,7 @@ function promiseFn(num, time = 500) {
 
   async function main_fetch(){
     var data_dict = {}
-    for (const[key,url] of URL_DICT){
+    for (const[key,url] of Object.entries(URL_DICT)){
       data_dict[key] = await getdata(url)
     }
     return data_dict
