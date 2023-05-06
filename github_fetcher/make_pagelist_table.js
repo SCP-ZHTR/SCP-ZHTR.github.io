@@ -5,7 +5,7 @@ function start_table(area,data,limit){
     const total_show=Math.min(total,limit);
     var in_table="";
     in_table='<tr class="TOPROW"></tr>'
-    for(i=0;i<total_show;i++){
+    for(var i=0;i<total_show;i++){
         in_table=`${in_table}<tr class='NAIVE ENTRY'></tr>`;
     }
     document.querySelector(`${area} .to_write table`).innerHTML=in_table;
@@ -20,14 +20,14 @@ function make_top_row(area){
 
 }
 
-dot_span="<span class='dot'>...</span>";
-pager_no='<span class="pager-no"></span>';
-next_page=`<span class="NEXT PN_button page_button">
+const dot_span="<span class='dot'>...</span>";
+const pager_no='<span class="pager-no"></span>';
+const next_page=`<span class="NEXT PN_button page_button">
 <a href="javascript:void(0);">
 <span class="target">下一頁</span>
 </a>
 </span>`;
-previous_page=`<span class="PREVIOUS HIDE_PN PN_button page_button">
+const previous_page=`<span class="PREVIOUS HIDE_PN PN_button page_button">
 <a href="javascript:void(0);">
 <span class="target">上一頁</span>
 </a>
@@ -50,8 +50,8 @@ function tr_listing(area,perpage){
     var page_ind=1;
     var pager_str='';
     while(k>perpage){
-        q=document.querySelectorAll(`${area} tr.NAIVE`);
-        for(i=0;i<perpage;i++){
+        var q=document.querySelectorAll(`${area} tr.NAIVE`);
+        for(var i=0;i<perpage;i++){
             q[i].classList.add(`page${page_ind}`);
             q[i].classList.remove(`NAIVE`);
         }
@@ -96,9 +96,9 @@ function td_organ(item,tr_ele){
 
 function td_listing(area,data){
     var q=document.querySelectorAll(`${area} tr.ENTRY`)
-    for(i=0;i<q.length;i++){
-        item=data[i];
-        tr=q[i];
+    for(var i=0;i<q.length;i++){
+        var item=data[i];
+        var tr=q[i];
         td_organ(item,tr);
     }
 }
@@ -113,11 +113,11 @@ function add_page_changer(area,no){
 
 
     var all_tr=document.querySelectorAll(`${area} tr.ENTRY`);
-    for (i=0;i<all_tr.length;i++){
+    for (var i=0;i<all_tr.length;i++){
         all_tr[i].classList.remove('showing');
     }
     var to_show=document.querySelectorAll(`${area} .page${no}`);
-    for(i=0;i<to_show.length;i++){
+    for(var i=0;i<to_show.length;i++){
         to_show[i].classList.add('showing');
     }
     var ifdot=document.querySelector(`${area} .dot`);
@@ -240,46 +240,46 @@ function to_previous_page(){
 function getready(area){
 
     var trs=document.querySelectorAll(`${area} tr.page1`);
-    for(i=0;i<trs.length;i++){
+    for(var i=0;i<trs.length;i++){
         trs[i].classList.add('showing');
     }
 
     var page_targets=document.querySelectorAll(`${area} .page_button:not(.PN_button)`);
-    no='1';
-    for(i=0;i<page_targets.length;i++){
+    var no='1';
+    for(var i=0;i<page_targets.length;i++){
     page_targets[i].classList.remove('current');
     if(page_targets[i].children[1].innerHTML==no){
         page_targets[i].classList.add('current')
     }
 }
     var pager_str=document.querySelectorAll(`${area} .pager-no`);
-    for(i=0;i<pager_str.length;i++){
+    for(var i=0;i<pager_str.length;i++){
     pager_str[i].innerHTML=`第 ${no} 頁`;
     }
 
 
     page_targets=document.querySelectorAll(`${area} .page_button:not(.PN_button)`);
-    for(i=0;i<page_targets.length;i++){
+    for(var i=0;i<page_targets.length;i++){
         page_targets[i].addEventListener("click",to_certain_page);
     }
 
     var pager_next=document.querySelectorAll(`${area} .page_button.NEXT`);
-    for(i=0;i<pager_next;i++){
+    for(var i=0;i<pager_next;i++){
         pager_next[i].addEventListener('click',to_next_page)
     }
 
     var pager_next=document.querySelectorAll(`${area} .page_button.NEXT`);
-    for(i=0;i<pager_next.length;i++){
+    for(var i=0;i<pager_next.length;i++){
         pager_next[i].addEventListener('click',to_next_page);
     }
 
     var pager_previous=document.querySelectorAll(`${area} .page_button.PREVIOUS`);
-    for(i=0;i<pager_previous.length;i++){
+    for(var i=0;i<pager_previous.length;i++){
         pager_previous[i].addEventListener('click',to_previous_page);
     }
 
     var tbp=document.querySelectorAll('.to_be_panel');
-    for(i=0;i<tbp.length;i++){
+    for(var i=0;i<tbp.length;i++){
         tbp[i].classList.add('content-panel');
         tbp[i].classList.add('standalone');
         tbp[i].classList.add('content-row');
@@ -301,14 +301,6 @@ if(data.length<perpage){
     }
 
 }
-
 }
 
-
-var HEADERS=new Headers();
-HEADERS.append('Pragma','No-Cache');
-HEADERS.append('Cache-Control','No-Cache');
-var INIT={
-    method:'GET',
-    headers:HEADERS
-};
+export{jointfunc}

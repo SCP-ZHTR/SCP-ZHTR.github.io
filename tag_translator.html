@@ -1,0 +1,109 @@
+<div style="display:inline">原本語言：</div>
+<select id="origin_lang">
+    <option>en</option>
+    <option>zh</option>
+    <option>cn</option>
+    <option>de</option>
+    <option>es</option>
+    <option>fr</option>
+    <option>int</option>
+    <option>it</option>
+    <option>jp</option>
+    <option>ko</option>
+    <option>pl</option>
+    <option>pt</option>
+    <option>ru</option>
+    <option>th</option>
+    <option>ua</option>
+    <option>vn</option>
+</select>
+<div style="display:inline">目標語言：</div>
+<select id="target_lang">
+    <option>zh</option>
+    <option>en</option>
+    <option>cn</option>
+    <option>de</option>
+    <option>es</option>
+    <option>fr</option>
+    <option>int</option>
+    <option>it</option>
+    <option>jp</option>
+    <option>ko</option>
+    <option>pl</option>
+    <option>pt</option>
+    <option>ru</option>
+    <option>th</option>
+    <option>ua</option>
+    <option>vn</option>
+</select>
+<input type="text" style="width:80%" id="input_box">
+<input type="button" value="翻譯" onclick="tag_translate()">
+<p>
+<div style="display:inline">標籤翻譯：</div>
+<div id="output_box" style="display:inline"></div>
+</p>
+
+<script>
+
+//讀取檔案
+const httpRequest = new XMLHttpRequest();
+var urls = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSngZjEjTh4vrohCypUBwnP1xkPTocH3UBNxqqxbBDEDzGI7gZ8utpYlAcNUkxMQ2lLzBKx8OLfBKkk/pub?gid=0&single=true&output=csv'
+httpRequest.open('GET',urls, true)
+httpRequest.send()
+
+//切割成list of dict
+httpRequest.onreadystatechange = function () {
+    if (httpRequest.readyState == 4 && httpRequest.status == 200) {
+        var tags_csv = httpRequest.responseText
+        tags_csv = tags_csv.split('\n')
+        for(var i=0;i<tags_csv.length;i++){
+            tags_csv[i] = tags_csv[i].substring(0, tags_csv[i].length-1)
+            tags_csv[i] = tags_csv[i].split(',')
+        }
+        tags_list = []
+        for(var i=1;i<tags_csv.length;i++){
+            tags_list[i-1] = {}
+            for(var j=0;j<tags_csv[i].length;j++){
+                tags_list[i-1][tags_csv[0][j]] = tags_csv[i][j]
+            }
+        }
+    }
+};
+
+var translate_set
+var translate_list
+
+function tag_translate(){
+    document.getElementById("output_box").innerHTML = ""
+
+    //取得參數
+    origin_lang = document.getElementById("origin_lang").value
+    target_lang = document.getElementById("target_lang").value
+    input_str = document.getElementById("input_box").value
+    input_list = input_str.split(' ')
+
+
+    for(var i=0;i<input_list.length;i++){
+        if(input_list[i]==''){
+            continue
+        }
+        //逐一比對
+        translate_array = new Array();
+        for(var j=0;j<tags_list.length;j++){
+            if(tags_list[j][origin_lang] == input_list[i]){
+                if(tags_list[j][target_lang]!=''){
+                    translate_array.push(tags_list[j][target_lang])
+                }
+            }
+        }
+        //寫入html
+        if(translate_array.size>0){
+            document.getElementById("output_box").innerHTML += translate_array[0]+" ";
+        }
+        else{
+            document.getElementById("output_box").innerHTML += "\<span style\=\"border\:2px red solid\"\>"+input_list[i]+"\<\/span\> "
+        }
+    }
+}
+
+</script>

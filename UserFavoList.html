@@ -1,23 +1,10 @@
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y8JP6K91EZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script type="module" src="github_fetcher/user_favorite_pagelist.js" charset="utf-8"></script>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./github_fetcher/pagelist_table.css">
+</head>
 
-  gtag('config', 'G-Y8JP6K91EZ');
-</script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5115834116864376"
-     crossorigin="anonymous"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maxium-scale=1.0, minimum-scale=1.0, user-scalable=yes"/>
-    <meta http-equiv="cache-control" content="no-cache">
-    <meta http-equiv="pragma" content="no-cache"> 
-    <meta http-equiv="expires" content="0"> 
-    
-    <link rel="stylesheet" href="making_a_page.css">
-    </head>
-    
+<body>
     <h1>喜歡的原創作品列表</h1>
     <div class="to_be_panel">
     <div id="original_area">
@@ -27,7 +14,7 @@
     </div>
     </div>
     <div style="height:3em;">　　　　</div>
-    
+
     <h1>喜歡的翻譯作品列表</h1>
     <div class="to_be_panel">
     <div id="translation_area">
@@ -36,56 +23,4 @@
         <div class="pager pager_wait"></div>
     </div>
     </div>
-    
-    
-    <script type="text/javascript" src="making_a_page.js" charset="utf-8"></script>
-    
-    <script>
-    let user_id=window.location.search;
-    user_id=user_id.substring(1,user_id.length);
-    
-    
-    fetch(`o_req/UserVoteTable/${user_id}.json`,INIT)
-    .then(function(response){
-        if(response.ok){
-        return response.json();}
-        throw '404';
-    
-    })
-    .then(function(tth){
-        tth=tth.reverse();
-        herearea='#original_area';
-        jointfunc(herearea,tth,20000,20);
-    
-    })
-    .catch(function(error){
-        to_write=document.querySelector('#original_area .to_write')
-        to_write.innerHTML='您還未有評分紀錄'
-    })
-
-    fetch(`t_req/UserVoteTable/${user_id}.json`,INIT)
-    .then(function(response){
-        if(response.ok){
-        return response.json();}
-        throw '404';
-    
-    })
-    .then(function(tth){
-        tth=tth.reverse();
-        herearea='#translation_area';
-        jointfunc(herearea,tth,20000,20);
-    
-    })
-    .catch(function(error){
-        to_write=document.querySelector('#translation_area .to_write');
-        to_write.innerHTML='您還未有評分紀錄';
-        tbp=document.querySelectorAll('.to_be_panel');
-    for(i=0;i<tbp.length;i++){
-        tbp[i].classList.add('content-panel');
-        tbp[i].classList.add('standalone');
-        tbp[i].classList.add('content-row');
-        tbp[i].classList.remove('to_be_panel');
-    }
-    })
-    </script>
-    
+</body>
