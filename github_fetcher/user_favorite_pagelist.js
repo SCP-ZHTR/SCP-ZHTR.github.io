@@ -28,10 +28,10 @@ async function area_writer(userid='4213515',area_code='O'){
     for (const element of complied_uvt){
         to_write_data.push(
             {
-                'TITLE' : value['title'],
-                'FULLNAME' : value['fullname'],
-                'RATING' : value['rating'],
-                'COMMENTS' : value['comments']
+                'TITLE' : element['title'],
+                'FULLNAME' : element['fullname'],
+                'RATING' : element['rating'],
+                'COMMENTS' : element['comments']
             }
         )
     }
