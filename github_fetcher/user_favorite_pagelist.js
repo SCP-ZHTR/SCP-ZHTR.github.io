@@ -25,7 +25,7 @@ async function area_writer(userid='4213515',area_code='O'){
         return
     }
     var to_write_data =[]
-    for (const[key,value] of Object.entries(complied_uvt)){
+    for (const element of complied_uvt){
         to_write_data.push(
             {
                 'TITLE' : value['title'],

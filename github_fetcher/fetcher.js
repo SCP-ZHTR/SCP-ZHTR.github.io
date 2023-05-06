@@ -24,7 +24,7 @@ function promiseFn(num, time = 500) {
         console.log('userid not found')
         return undefined
     }
-    var complied_uvt = {}
+    var complied_uvt = []
     var created_at
     while(true){
         created_at = personal_uvt.pop()
@@ -32,7 +32,7 @@ function promiseFn(num, time = 500) {
         created_at = created_at[0]
         var page_data = pil[created_at]
         if(page_data==undefined) continue
-        complied_uvt[created_at] = page_data
+        complied_uvt.push(page_data)
     }
     return(complied_uvt)
 
