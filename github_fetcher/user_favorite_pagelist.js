@@ -1,4 +1,4 @@
-import {main_fetch,sortUTV} from './fetcher.js';
+import {main_fetch,sortUTV,sortPIL} from './fetcher.js';
 import { jointfunc } from './make_pagelist_table.js';
 
 function user_not_found(area){
@@ -19,7 +19,8 @@ async function area_writer(userid='4213515',area_code='O'){
     if (area_code == 'T') herearea = '#translation_area';
 
     const data_dict = await main_fetch()
-    const complied_uvt = sortUTV(userid,data_dict[`${area_code}_PIL`],data_dict[`${area_code}_UVT`])
+    const complied_uvt = sortUTV(
+        userid, sortPIL(data_dict[`${area_code}_PIL`],data_dict[`${area_code}_AR`]),data_dict[`${area_code}_UVT`])
     if (complied_uvt==undefined){
         user_not_found(herearea)
         return
