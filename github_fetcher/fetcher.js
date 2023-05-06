@@ -50,7 +50,7 @@ function promiseFn(num, time = 500) {
       if(key == 'PIL') url_core = 'PIL_loop';
       if(key == 'UVT') url_core = 'UVT';
       if(key == 'AR') url_core = 'Adjusted_Rating';
-      URL_DICT[`${genre}_${key}`] = `${raw_url_root}_${genre}_${url_core}`
+      URL_DICT[`${genre}_${key}`] = `${raw_url_root}_${genre}_${url_core}.json`
     }
   }
 
