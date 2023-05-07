@@ -45,7 +45,7 @@ function promiseFn(num, time = 500) {
   const raw_url_root = 'https://raw.githubusercontent.com/SCP-ZHTR/BackendStorage/main/Async'
   var URL_DICT = {}
   var url_core
-  for (const genre of ['T','O']){
+  for (const genre of ['O','T']){
     for (const key of ['PIL','UVT', 'AR']){
       if(key == 'PIL') url_core = 'PIL_loop';
       if(key == 'UVT') url_core = 'UVT';
