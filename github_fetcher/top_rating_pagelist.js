@@ -91,3 +91,6 @@ function created_at_filter_generator(min,max){
 
 writer(null,created_at_filter_generator('2021-01-01','2022-01-01'))
 writer(null,created_at_filter_generator('2022-01-01','2023-01-01'))
+
+export{created_at_filter_generator}
+export{writer}
