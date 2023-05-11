@@ -1,10 +1,49 @@
 <head>
-    <script type="module" src="github_fetcher/top_rating_pagelist.js" charset="utf-8"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="./github_fetcher/pagelist_table.css">
+    <link rel="stylesheet" href="https://scp-zhtr.github.io/github_fetcher/pagelist_table.css">
 </head>
 
+<script type="module" charset="utf-8">
+    import {writer,created_at_filter_generator} from "github_fetcher/top_rating_pagelist.js"
+    // import {writer,created_at_filter_generator} from "https://scp-zhtr.github.io/github_fetcher/top_rating_pagelist.js"
+
+    let today = dayjs().hour(0).minute(0).second(0).millisecond(0)
+    let season_start_day = dayjs("2019-03-01")
+    let season_end_day,next_season_start_day
+    let all_season_list = []
+    while(!season_start_day.isAfter(today)){
+        next_season_start_day = season_start_day.add(3,'month')
+        season_end_day = next_season_start_day.subtract(1,'day')
+        all_season_list.push([season_start_day.format('YYYY-MM-DD'),season_end_day.format('YYYY-MM-DD')])
+        season_start_day = next_season_start_day
+    }
+    const this_season = all_season_list.pop()
+    const last_season = all_season_list.pop()
+    const before_season_list = all_season_list.reverse()
+    console.log(before_season_list,this_season,last_season)
+    
+    writer(null)
+    
+    const this_season_element = document.getElementById('this_season')
+    this_season_element.addEventListener('click',async function(event){
+        await writer(null,created_at_filter_generator(this_season[0],this_season[1]))
+    })
+    const last_season_element = document.getElementById('last_season')
+    last_season_element.addEventListener('click',async function(event){
+        await writer(null,created_at_filter_generator(last_season[0],last_season[1]))
+    })
+    const all_season_element = document.getElementById('all_season')
+    all_season_element.addEventListener('click',async function(event){
+        await writer(null)
+    })
+</script>
 <body>
+    <div id="seasons">
+        <input type="radio" id="this_season" name="seasons"><label for="this_season">本季度</label>
+        <input type="radio" id="last_season" name="seasons"><label for="last_season">上季度</label>
+        <input type="radio" id="all_season" name="seasons"><label for="all_season">不設限</label>
+    </div>
     <h1>喜歡的原創作品列表</h1>
     <div class="to_be_panel">
     <div id="original_area">
