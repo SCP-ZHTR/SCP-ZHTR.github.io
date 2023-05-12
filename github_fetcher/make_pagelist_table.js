@@ -76,8 +76,6 @@ function tr_listing(area,perpage){
     range(To_deNAIVE).map(
         (page_ind_minus_1) => {
             page_ind = page_ind_minus_1 + 1
-            console.log(page_ind)
-            console.log(Math.min((page_ind) * perpage, naive_nodes.length))
             const nodes_to_work = Array.from(naive_nodes).slice((page_ind-1) * perpage, Math.min(page_ind * perpage, naive_nodes.length))
             all_classList_add(nodes_to_work, `page${page_ind}`)
             all_classList_remove(nodes_to_work, `NAIVE`)
@@ -123,10 +121,7 @@ function td_listing(area, data){
 }
 
 function add_page_changer(area,no){
-    var page_targets = document.querySelectorAll(`${area} .page_button:not(.PN_button)`);
-    var pager_next = document.querySelectorAll(`${area} .page_button.NEXT`);
-    var pager_previous = document.querySelectorAll(`${area} .PREVIOUS`);
-    var MaxInd = document.querySelector(`${area} .pager>.page_button:nth-last-child(2)>span`).innerHTML;
+    const MaxInd = document.querySelector(`${area} .pager>.page_button:nth-last-child(2)>span`).innerHTML
 
     all_classList_remove(document.querySelectorAll(`${area} tr.ENTRY`), 'showing')
     all_classList_add(document.querySelectorAll(`${area} .page${no}`), 'showing')
@@ -165,15 +160,20 @@ function add_page_changer(area,no){
 
         new_pager=`${pager_no}${previous_page}${pb_wrapper('1')}${new_pager}${pb_wrapper(MaxInd)}${next_page}`
 
-        var pager=document.querySelectorAll(`${area} .pager`);
+        const pager = document.querySelectorAll(`${area} .pager`);
         all_innerHTML_set(pager, new_pager)
 
-        page_targets = document.querySelectorAll(`${area} .page_button:not(.PN_button)`);
-        pager_next=document.querySelectorAll(`${area} .page_button.NEXT`);
-        pager_previous=document.querySelectorAll(`${area} .PREVIOUS`);
+        var page_targets = document.querySelectorAll(`${area} .page_button:not(.PN_button)`);
+        var pager_next=document.querySelectorAll(`${area} .page_button.NEXT`);
+        var pager_previous=document.querySelectorAll(`${area} .PREVIOUS`);
         all_eventListener_add(page_targets, "click", to_certain_page)
         all_eventListener_add(pager_next, "click", to_next_page)
         all_eventListener_add(pager_previous, "click", to_previous_page)
+    }
+    else{
+        page_targets = document.querySelectorAll(`${area} .page_button:not(.PN_button)`);
+        pager_next = document.querySelectorAll(`${area} .page_button.NEXT`);
+        pager_previous = document.querySelectorAll(`${area} .PREVIOUS`);
     }
 
     const HIDE_PN = 'HIDE_PN'
