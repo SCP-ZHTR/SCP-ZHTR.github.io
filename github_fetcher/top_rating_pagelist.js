@@ -61,7 +61,7 @@ function created_at_filter_generator(min,max){
         date => {
             if(date==undefined) return undefined;
             const date_array = date.split('-').map(d=>parseInt(d))
-            return new Date(date_array[0],date_array[1],date_array[2],0,0,0,0).getTime()
+            return new Date(date_array[0],date_array[1]-1,date_array[2],0,0,0,0).getTime()
         }
     ).map(
         (timestamp,index)=>{
