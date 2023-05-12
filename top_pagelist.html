@@ -1,7 +1,7 @@
 <head>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="./github_fetcher/pagelist_table.css">
+    <link rel="stylesheet" href="https://scp-zhtr.github.io/github_fetcher/pagelist_table.css">
 </head>
 
 <script type="module" charset="utf-8">
@@ -24,19 +24,40 @@
     const last_season = all_season_list.pop()
     const before_season_list = all_season_list.reverse()
     console.log(before_season_list,this_season,last_season)
-    
+
     writer(null,created_at_filter_generator(this_season[0],this_season[1]))
     
     const this_season_element = document.getElementById('this_season')
-    this_season_element.addEventListener('click',async function(event){
+    this_season_element.addEventListener('click',async () => {
+        before_season_select_element.disabled = true
         await writer(null,created_at_filter_generator(this_season[0],this_season[1]))
     })
     const last_season_element = document.getElementById('last_season')
-    last_season_element.addEventListener('click',async function(event){
+    last_season_element.addEventListener('click',async () => {
+        before_season_select_element.disabled = true
         await writer(null,created_at_filter_generator(last_season[0],last_season[1]))
     })
+
+    const before_season_element = document.getElementById('before_season')
+    before_season_element.addEventListener('click',() => {
+        before_season_select_element.disabled = false
+    })
+    
+    const before_season_select_element = document.getElementById('before_season_select');
+    for(let i=0;i<before_season_list.length;i++) {
+        let option_element = document.createElement('option');
+        option_element.value = i;
+        option_element.innerHTML = before_season_list[i][0]+' ~ '+before_season_list[i][1];
+        before_season_select_element.appendChild(option_element);
+    }
+    before_season_select_element.addEventListener('change',async () => {
+        let i = Number(before_season_select_element.value)
+        await writer(null,created_at_filter_generator(before_season_list[i][0],before_season_list[i][1]))
+    })
+
     const all_season_element = document.getElementById('all_season')
-    all_season_element.addEventListener('click',async function(event){
+    all_season_element.addEventListener('click',async () => {
+        before_season_select_element.disabled = true
         await writer(null)
     })
 </script>
@@ -44,6 +65,10 @@
     <div id="seasons">
         <input type="radio" id="this_season" name="seasons"><label for="this_season">本季度</label>
         <input type="radio" id="last_season" name="seasons"><label for="last_season">上季度</label>
+        <input type="radio" id="before_season" name="seasons"><label for="before_season">選擇之前季度</label>
+        <select id="before_season_select" name="before_season_select" disabled>
+            <option selected disabled>請選擇季度時間</option>
+        </select>
         <input type="radio" id="all_season" name="seasons"><label for="all_season">不設限</label>
     </div>
     <h1>喜歡的原創作品列表</h1>
