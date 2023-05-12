@@ -1,14 +1,14 @@
 <head>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="https://scp-zhtr.github.io/github_fetcher/pagelist_table.css">
+    <link rel="stylesheet" href="./github_fetcher/pagelist_table.css">
 </head>
 
 <script type="module" charset="utf-8">
     //相對網址會出現Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'.
     //先改為絕對網址
     //import {writer,created_at_filter_generator} from "./github_fetcher/top_rating_pagelist.js"
-    import {writer,created_at_filter_generator} from "https://scp-zhtr.github.io/github_fetcher/top_rating_pagelist.js"
+    import {writer,created_at_filter_generator} from "./github_fetcher/top_rating_pagelist.js"
 
     let today = dayjs().hour(0).minute(0).second(0).millisecond(0)
     let season_start_day = dayjs("2019-03-01")
@@ -25,7 +25,7 @@
     const before_season_list = all_season_list.reverse()
     console.log(before_season_list,this_season,last_season)
     
-    writer(null)
+    writer(null,created_at_filter_generator(this_season[0],this_season[1]))
     
     const this_season_element = document.getElementById('this_season')
     this_season_element.addEventListener('click',async function(event){

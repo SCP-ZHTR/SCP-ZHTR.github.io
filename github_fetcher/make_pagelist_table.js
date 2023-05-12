@@ -295,11 +295,17 @@ tr_listing(area,perpage);
 td_listing(area,data);
 getready(area);
 if(data.length<perpage){
-    var to_del=document.querySelectorAll(`${area} .pager`)
-    for(var i=0;i<to_del.length;i++){
-        to_del[i].remove();
+    var to_hide = document.querySelectorAll(`${area} .pager`)
+    for(var i=0;i<to_hide.length;i++){
+        console.log(to_hide[i])
+        to_hide[i].classList.add('to_hide');
     }
-
+}
+else{
+    var to_show = document.querySelectorAll(`${area} .pager`)
+    for(var i=0;i<to_show.length;i++){
+        to_show[i].classList.remove('to_hide');
+    }
 }
 }
 

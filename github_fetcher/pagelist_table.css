@@ -153,3 +153,7 @@ display: inline-block;
 .PN_button.HIDE_PN{
     display: none;
 }
+
+.to_hide{
+  display: none;
+}
