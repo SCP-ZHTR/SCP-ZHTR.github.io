@@ -17,25 +17,24 @@
     while(!season_start_day.isAfter(today)){
         next_season_start_day = season_start_day.add(3,'month')
         season_end_day = next_season_start_day.subtract(1,'day')
-        all_season_list.push([season_start_day.format('YYYY-MM-DD'),season_end_day.format('YYYY-MM-DD')])
+        all_season_list.push([season_start_day.format('YYYY-MM-DD'),season_end_day.format('YYYY-MM-DD'),next_season_start_day.format('YYYY-MM-DD')])
         season_start_day = next_season_start_day
     }
     const this_season = all_season_list.pop()
     const last_season = all_season_list.pop()
     const before_season_list = all_season_list.reverse()
-    console.log(before_season_list,this_season,last_season)
 
-    writer(null,created_at_filter_generator(this_season[0],this_season[1]))
+    writer(null,created_at_filter_generator(this_season[0],this_season[2]))
     
     const this_season_element = document.getElementById('this_season')
     this_season_element.addEventListener('click',async () => {
         before_season_select_element.disabled = true
-        await writer(null,created_at_filter_generator(this_season[0],this_season[1]))
+        await writer(null,created_at_filter_generator(this_season[0],this_season[2]))
     })
     const last_season_element = document.getElementById('last_season')
     last_season_element.addEventListener('click',async () => {
         before_season_select_element.disabled = true
-        await writer(null,created_at_filter_generator(last_season[0],last_season[1]))
+        await writer(null,created_at_filter_generator(last_season[0],last_season[2]))
     })
 
     const before_season_element = document.getElementById('before_season')
@@ -47,12 +46,12 @@
     for(let i=0;i<before_season_list.length;i++) {
         let option_element = document.createElement('option');
         option_element.value = i;
-        option_element.innerHTML = before_season_list[i][0]+' ~ '+before_season_list[i][1];
+        option_element.innerHTML = before_season_list[i][0]+' ~ '+before_season_list[i][2];
         before_season_select_element.appendChild(option_element);
     }
     before_season_select_element.addEventListener('change',async () => {
         let i = Number(before_season_select_element.value)
-        await writer(null,created_at_filter_generator(before_season_list[i][0],before_season_list[i][1]))
+        await writer(null,created_at_filter_generator(before_season_list[i][0],before_season_list[i][2]))
     })
 
     const all_season_element = document.getElementById('all_season')
