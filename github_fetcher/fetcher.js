@@ -22,10 +22,8 @@ function promiseFn(num, time = 500) {
   }
 
   function sortUTV(userid,pil,uvt){
-    console.log('doing the sort')
     const personal_uvt = uvt[userid];
     if (personal_uvt == undefined){
-        console.log('userid not found')
         return undefined
     }
     var complied_uvt = []

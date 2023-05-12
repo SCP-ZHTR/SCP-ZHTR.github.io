@@ -1,23 +1,46 @@
+const range = (number) => {return Array.from(Array(number).keys())}
+const all_eventListener_add = (nodes, type, func) => {Array.from(nodes).map(
+        (node) => {node.addEventListener(type, func)})
+}
+const all_innerHTML_set = (nodes, contents) => {Array.from(nodes).map(
+    (node) => {node.innerHTML = contents})
+}
+const all_classList_add = (nodes, to_adds) => {
+    if (Array.isArray(to_adds)){}
+    else to_adds = [to_adds]
+    Array.from(nodes).map(
+    (node) => {
+        to_adds.map(
+            (to_add => {node.classList.add(to_add)})
+        )
+    })
+}
+const all_classList_remove = (nodes, to_removes) => {
+    if (Array.isArray(to_removes)){}
+    else to_removes = [to_removes]
+    Array.from(nodes).map(
+    (node) => {
+        to_removes.map(
+            (to_remove => {node.classList.remove(to_remove)})
+        )
+    })
+}
+
 function start_table(area,data,limit){
-    document.querySelector(`${area} .to_write`).innerHTML=
-    `<table style="width: 100%;"></table>`;
-    var total=data.length;
-    const total_show=Math.min(total,limit);
-    var in_table="";
-    in_table='<tr class="TOPROW"></tr>'
-    for(var i=0;i<total_show;i++){
-        in_table=`${in_table}<tr class='NAIVE ENTRY'></tr>`;
-    }
+    document.querySelector(`${area} .to_write`).innerHTML=`<table style="width: 100%;"></table>`;
+    const top_row = '<tr class="TOPROW"></tr>'
+    const naive_entries = new Array(Math.min(data.length, limit)).fill("<tr class='NAIVE ENTRY'></tr>")
+    const in_table = top_row + naive_entries.join('')
     document.querySelector(`${area} .to_write table`).innerHTML=in_table;
 }
 
 function make_top_row(area){
-    var toprow=document.querySelector(`${area} .TOPROW`);
-    var tdtitles=['條目標題','評分','評論數'];
-    tdtitles=tdtitles.join('</td><td>');
-    tdtitles=`<td>${tdtitles}</td>`;
-    toprow.innerHTML=tdtitles;
-
+    document.querySelector(`${area} .TOPROW`).innerHTML = 
+    ['條目標題', '評分', '評論數'].map
+        (
+        (title) => {return `<td>${title}</td>`}
+        )
+    .join('')
 }
 
 const dot_span="<span class='dot'>...</span>";
@@ -45,104 +68,92 @@ function pb_wrapper(str){
 
 
 function tr_listing(area,perpage){
-    var k=document.querySelectorAll(`${area} tr.NAIVE`).length;
-    var p=document.querySelectorAll(`${area} .pager`);
-    var page_ind=1;
-    var pager_str='';
-    while(k>perpage){
-        var q=document.querySelectorAll(`${area} tr.NAIVE`);
-        for(var i=0;i<perpage;i++){
-            q[i].classList.add(`page${page_ind}`);
-            q[i].classList.remove(`NAIVE`);
+    var page_ind = 0
+    const To_deNAIVE = Math.ceil(
+        document.querySelectorAll(`${area} tr.NAIVE`).length / perpage
+    )
+    const naive_nodes = document.querySelectorAll(`${area} tr.NAIVE`)
+    range(To_deNAIVE).map(
+        (page_ind_minus_1) => {
+            page_ind = page_ind_minus_1 + 1
+            console.log(page_ind)
+            console.log(Math.min((page_ind) * perpage, naive_nodes.length))
+            const nodes_to_work = Array.from(naive_nodes).slice((page_ind-1) * perpage, Math.min(page_ind * perpage, naive_nodes.length))
+            all_classList_add(nodes_to_work, `page${page_ind}`)
+            all_classList_remove(nodes_to_work, `NAIVE`)
         }
-        k=document.querySelectorAll(`${area} tr.NAIVE`).length;
-        page_ind+=1;
+    )
+
+    var pager_str = ''
+    if(To_deNAIVE <= 10 && To_deNAIVE > 1){
+        pager_str = range(To_deNAIVE).map(
+            (page_index) => {return pb_wrapper(page_index+1)}
+        )
+        .join('')
     }
-    q=document.querySelectorAll(`${area} tr.NAIVE`);
-    for(i=0;i<q.length;i++){
-        q[i].classList.add(`page${page_ind}`);
-        q[i].classList.remove(`NAIVE`);
+    else if(To_deNAIVE > 10){
+        pager_str = range(3).map(
+            (page_index) => {return pb_wrapper(page_index+1)}
+        )
+        .join('') + `${dot_span}${pb_wrapper(page_ind)}`
     }
 
-    if(page_ind<=10&&page_ind>1){
-        for(i=0;i<page_ind;i++){
-            pager_str=`${pager_str}${pb_wrapper(i+1)}`;
-        }
-    }
-    else if(page_ind>10){
-        for(i=0;i<3;i++){
-            pager_str=`${pager_str}${pb_wrapper(i+1)}`;
-        }
-        pager_str=`${pager_str}${dot_span}${pb_wrapper(page_ind)}`;
-        
-        
-    }
-    pager_str=`${pager_no}${previous_page}${pager_str}${next_page}`;
-    for(i=0;i<p.length;i++){
-        p[i].innerHTML=pager_str;
-    }
-
+    const pager_nodes = document.querySelectorAll(`${area} .pager`)
+    all_innerHTML_set(pager_nodes, `${pager_no}${previous_page}${pager_str}${next_page}`)
 }
 
-function td_organ(item,tr_ele){
-    var a_part=`<a target="_blank"
+function td_organ(item, tr_ele){
+    var a_part = `<a target="_blank"
      href='http://scp-zh-tr.wikidot.com/${item['FULLNAME']}'>
      ${item['TITLE']}
      </a>`;
-    var r_part=`${item['RATING']}`;
-    var c_part=`${item['COMMENTS']}`;
-    tr_ele.innerHTML=`<td>${a_part}</td><td>${r_part}</td><td>${c_part}</td>`;
+    var r_part = `${item['RATING']}`;
+    var c_part = `${item['COMMENTS']}`;
+    tr_ele.innerHTML = [a_part, r_part, c_part].map(
+        (ele) => {return `<td>${ele}</td>`}
+    ).join('')
 }
 
-function td_listing(area,data){
-    var q=document.querySelectorAll(`${area} tr.ENTRY`)
-    for(var i=0;i<q.length;i++){
-        var item=data[i];
-        var tr=q[i];
-        td_organ(item,tr);
-    }
+function td_listing(area, data){
+    Array.from(document.querySelectorAll(`${area} tr.ENTRY`)).map(
+        (node, index) => {
+            td_organ(data[index], node)
+        }
+    )
 }
-
-
 
 function add_page_changer(area,no){
-    var page_targets=document.querySelectorAll(`${area} .page_button:not(.PN_button)`);
-    var pager_next=document.querySelectorAll(`${area} .page_button.NEXT`);
-    var pager_previous=document.querySelectorAll(`${area} .PREVIOUS`);
-    var MaxInd=document.querySelector(`${area} .pager>.page_button:nth-last-child(2)>span`).innerHTML;
+    var page_targets = document.querySelectorAll(`${area} .page_button:not(.PN_button)`);
+    var pager_next = document.querySelectorAll(`${area} .page_button.NEXT`);
+    var pager_previous = document.querySelectorAll(`${area} .PREVIOUS`);
+    var MaxInd = document.querySelector(`${area} .pager>.page_button:nth-last-child(2)>span`).innerHTML;
 
+    all_classList_remove(document.querySelectorAll(`${area} tr.ENTRY`), 'showing')
+    all_classList_add(document.querySelectorAll(`${area} .page${no}`), 'showing')
 
-    var all_tr=document.querySelectorAll(`${area} tr.ENTRY`);
-    for (var i=0;i<all_tr.length;i++){
-        all_tr[i].classList.remove('showing');
-    }
-    var to_show=document.querySelectorAll(`${area} .page${no}`);
-    for(var i=0;i<to_show.length;i++){
-        to_show[i].classList.add('showing');
-    }
-    var ifdot=document.querySelector(`${area} .dot`);
-    if(ifdot!==null){
-        var nno=Number(no);
-        if(no>3&&no<MaxInd-2){
+    const ifdot = document.querySelector(`${area} .dot`)
+    if(ifdot !== null){
+        const nno=Number(no);
+        if(no > 3 && no < MaxInd-2){
             var new_pager=`
             ${dot_span}
             ${pb_wrapper(`${nno-1}`)}${pb_wrapper(`${nno}`)}${pb_wrapper(`${nno+1}`)}
             ${dot_span}
             `
         }
-        else if(no==3){
+        else if(no == 3){
             var new_pager=`
             ${pb_wrapper(`${nno-1}`)}${pb_wrapper(`${nno}`)}${pb_wrapper(`${nno+1}`)}
             ${dot_span}
             `
         }
-        else if(no==MaxInd-2){
+        else if(no == MaxInd-2){
             var new_pager=`
             ${dot_span}
             ${pb_wrapper(`${nno-1}`)}${pb_wrapper(`${nno}`)}${pb_wrapper(`${nno+1}`)}
             `
         }
-        else if(no==MaxInd||no==MaxInd-1){
+        else if(no == MaxInd || no == MaxInd-1){
             var new_pager=`
             ${dot_span}
             ${pb_wrapper(MaxInd-2)}${pb_wrapper(MaxInd-1)}`
@@ -153,160 +164,94 @@ function add_page_changer(area,no){
         }
 
         new_pager=`${pager_no}${previous_page}${pb_wrapper('1')}${new_pager}${pb_wrapper(MaxInd)}${next_page}`
-        var pager=document.querySelectorAll(`${area} .pager`);
-        for(i=0;i<pager.length;i++){
-        pager[i].innerHTML=new_pager;
-        }
 
-        page_targets=document.querySelectorAll(`${area} .page_button:not(.PN_button)`);
+        var pager=document.querySelectorAll(`${area} .pager`);
+        all_innerHTML_set(pager, new_pager)
+
+        page_targets = document.querySelectorAll(`${area} .page_button:not(.PN_button)`);
         pager_next=document.querySelectorAll(`${area} .page_button.NEXT`);
         pager_previous=document.querySelectorAll(`${area} .PREVIOUS`);
-        
-        for(i=0;i<page_targets.length;i++){
-            page_targets[i].addEventListener("click",to_certain_page);
-        }
-        for(i=0;i<pager_next.length;i++){
-            pager_next[i].addEventListener('click',to_next_page);
-        }
-        for(i=0;i<pager_previous.length;i++){
-            pager_previous[i].addEventListener('click',to_previous_page);
-        }
+        all_eventListener_add(page_targets, "click", to_certain_page)
+        all_eventListener_add(pager_next, "click", to_next_page)
+        all_eventListener_add(pager_previous, "click", to_previous_page)
     }
 
-    if (no==MaxInd){
-        pager_next=document.querySelectorAll(`${area} .page_button.NEXT`);
-        for(i=0;i<pager_next.length;i++){
-            pager_next[i].classList.add('HIDE_PN');
+    const HIDE_PN = 'HIDE_PN'
+    const num_and_hide = (certain_num, to_hide) =>{
+        return (num_to_trial) =>{
+            if(num_to_trial == certain_num) all_classList_add(to_hide, HIDE_PN)
+            else all_classList_remove(to_hide, HIDE_PN)
         }
     }
-    else{
-        pager_next=document.querySelectorAll(`${area} .page_button.NEXT`);
-        for(i=0;i<pager_next.length;i++){
-            pager_next[i].classList.remove('HIDE_PN');
-        }    
-    }
-
-    if (no=='1'){
-        pager_previous=document.querySelectorAll(`${area} .page_button.PREVIOUS`);
-        for(i=0;i<pager_previous.length;i++){
-            pager_previous[i].classList.add('HIDE_PN');
-        }
-    }
-    else{
-        pager_previous=document.querySelectorAll(`${area} .page_button.PREVIOUS`);
-        for(i=0;i<pager_previous.length;i++){
-            pager_previous[i].classList.remove('HIDE_PN');
-        }    
-
-    }
-
-
-    for(i=0;i<page_targets.length;i++){
-        page_targets[i].classList.remove('current');
-        if(page_targets[i].children[1].innerHTML==no){
-            page_targets[i].classList.add('current');
-        }
     
-    }
-
+    num_and_hide(MaxInd, pager_next)(no)
+    num_and_hide(1, pager_previous)(no)
+    all_classList_remove(page_targets, 'current')
+    all_classList_add(Array.from(page_targets).filter((node) => {
+        return node.children[1].innerHTML == no}), 'current')
     var pager_pointer=document.querySelectorAll(`${area} .pager-no`);
-    for(i=0;i<pager_pointer.length;i++){
-    pager_pointer[i].innerHTML=`第 ${no} 頁`;
-    }
-
+    all_innerHTML_set(pager_pointer, `第 ${no} 頁`)
 }
 
 function to_certain_page(){
-    var area=`#${this.parentNode.parentNode.id}`;
-    var no=this.children[1].innerHTML;
+    var area = `#${this.parentNode.parentNode.id}`;
+    var no = this.children[1].innerHTML;
     add_page_changer(area,no);
 }
 
 function to_next_page(){
     var area=`#${this.parentNode.parentNode.id}`;
     var no=document.querySelector(`${area} .current .pre-current`).innerHTML;
-    no=`${Number(no)+1}`
+    no = `${Number(no)+1}`
     add_page_changer(area,no);
 }
 
 function to_previous_page(){
-    var area=`#${this.parentNode.parentNode.id}`;
-    var no=document.querySelector(`${area} .current .pre-current`).innerHTML;
-    no=`${Number(no)-1}`
+    var area = `#${this.parentNode.parentNode.id}`;
+    var no = document.querySelector(`${area} .current .pre-current`).innerHTML;
+    no = `${Number(no)-1}`
     add_page_changer(area,no);
 }
 
 
 function getready(area){
 
-    var trs=document.querySelectorAll(`${area} tr.page1`);
-    for(var i=0;i<trs.length;i++){
-        trs[i].classList.add('showing');
-    }
+    const trs=document.querySelectorAll(`${area} tr.page1`);
+    all_classList_add(trs, 'showing')
 
-    var page_targets=document.querySelectorAll(`${area} .page_button:not(.PN_button)`);
-    var no='1';
-    for(var i=0;i<page_targets.length;i++){
-    page_targets[i].classList.remove('current');
-    if(page_targets[i].children[1].innerHTML==no){
-        page_targets[i].classList.add('current')
-    }
-}
-    var pager_str=document.querySelectorAll(`${area} .pager-no`);
-    for(var i=0;i<pager_str.length;i++){
-    pager_str[i].innerHTML=`第 ${no} 頁`;
-    }
+    const page_targets = document.querySelectorAll(`${area} .page_button:not(.PN_button)`)
+    const pager_next=document.querySelectorAll(`${area} .page_button.NEXT`);
+    const pager_previous=document.querySelectorAll(`${area} .PREVIOUS`);
+    all_classList_remove(page_targets, 'current')
+    all_eventListener_add(page_targets, "click", to_certain_page)
+    all_eventListener_add(pager_next, "click", to_next_page)
+    all_eventListener_add(pager_previous, "click", to_previous_page)
 
+    const no = '1';
+    const pager_pointer = document.querySelectorAll(`${area} .pager-no`);
+    all_classList_add(Array.from(page_targets).filter((node) => {
+        return node.children[1].innerHTML == no}), 'current')
+    all_innerHTML_set(pager_pointer, `第 ${no} 頁`)
 
-    page_targets=document.querySelectorAll(`${area} .page_button:not(.PN_button)`);
-    for(var i=0;i<page_targets.length;i++){
-        page_targets[i].addEventListener("click",to_certain_page);
-    }
-
-    var pager_next=document.querySelectorAll(`${area} .page_button.NEXT`);
-    for(var i=0;i<pager_next;i++){
-        pager_next[i].addEventListener('click',to_next_page)
-    }
-
-    var pager_next=document.querySelectorAll(`${area} .page_button.NEXT`);
-    for(var i=0;i<pager_next.length;i++){
-        pager_next[i].addEventListener('click',to_next_page);
-    }
-
-    var pager_previous=document.querySelectorAll(`${area} .page_button.PREVIOUS`);
-    for(var i=0;i<pager_previous.length;i++){
-        pager_previous[i].addEventListener('click',to_previous_page);
-    }
-
-    var tbp=document.querySelectorAll('.to_be_panel');
-    for(var i=0;i<tbp.length;i++){
-        tbp[i].classList.add('content-panel');
-        tbp[i].classList.add('standalone');
-        tbp[i].classList.add('content-row');
-        tbp[i].classList.remove('to_be_panel');
-    }
-
+    const tbp=document.querySelectorAll('.to_be_panel');
+    all_classList_add(tbp, ['content-panel', 'standalone', 'content-row'])
+    all_classList_remove(tbp, 'to_be_panel')
 }
 
-function jointfunc(area,data,limit,perpage){
-    start_table(area,data,limit);
-    make_top_row(area);
-tr_listing(area,perpage);
-td_listing(area,data);
-getready(area);
-if(data.length<perpage){
-    var to_hide = document.querySelectorAll(`${area} .pager`)
-    for(var i=0;i<to_hide.length;i++){
-        console.log(to_hide[i])
-        to_hide[i].classList.add('to_hide');
+function jointfunc(area, data, limit, perpage){
+    start_table(area,data,limit)
+    make_top_row(area)
+    tr_listing(area,perpage)
+    td_listing(area,data)
+    getready(area)
+
+    const pager = document.querySelectorAll(`${area} .pager`)
+    if(data.length < perpage){
+        all_classList_add(pager, 'to_hide')
     }
-}
-else{
-    var to_show = document.querySelectorAll(`${area} .pager`)
-    for(var i=0;i<to_show.length;i++){
-        to_show[i].classList.remove('to_hide');
+    else{
+        all_classList_remove(pager, 'to_hide')
     }
-}
 }
 
 export{jointfunc}

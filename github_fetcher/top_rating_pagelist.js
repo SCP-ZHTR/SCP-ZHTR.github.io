@@ -2,7 +2,6 @@ import {main_fetch,sortUTV,sortPIL} from './fetcher.js';
 import { jointfunc } from './make_pagelist_table.js';
 
 async function sort_zip_filter(sorted_by='justified_rating',pagefilters=null){
-    console.log(pagefilters)
     if(sorted_by==null) sorted_by = 'justified_rating'
 
     const genres = ['O','T']
@@ -37,7 +36,6 @@ async function sort_zip_filter(sorted_by='justified_rating',pagefilters=null){
         (genre,i)=>{
             return AR_zip_PIL(sorted_ARs[i],PILs[i])
     })
-    console.log(zippeds)
     if (pagefilters==null) return(Object.fromEntries(zippeds.map((zipped,i)=>{return [genres[i],zipped]})))
     else return(
         Object.fromEntries(
@@ -50,7 +48,6 @@ async function sort_zip_filter(sorted_by='justified_rating',pagefilters=null){
 async function writer(sorted_by='justified_rating',pagefilter=null){
     const genres = ['O','T']
     const data_to_write = await sort_zip_filter(sorted_by,pagefilter)
-    console.log(data_to_write)
     const Areas = {'O':'#original_area','T':'#translation_area'}
     genres.map(genre => {
         jointfunc(Areas[genre],data_to_write[genre],20000,20)
@@ -69,13 +66,11 @@ function created_at_filter_generator(min,max){
     ).map(
         (timestamp,index)=>{
             if(timestamp==undefined) return undefined
-            console.log(timestamp)
             const bigger_or_smaller = [(number)=>{return (trialed)=>{return trialed >= number}},
                 (number)=>{return (trialed)=>{return trialed < number}}]
             return bigger_or_smaller[index](parseInt(timestamp/1000))
         }
     ).filter(condition => {return condition!==undefined})
-    console.log(conditions)
     const final_function = (trialed) => {
         const results = conditions.map(
             condition => {return condition(trialed['CREATED_AT'])}    
