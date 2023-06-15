@@ -50,7 +50,7 @@ async function writer(sorted_by='justified_rating',pagefilter=null){
     const data_to_write = await sort_zip_filter(sorted_by,pagefilter)
     const Areas = {'O':'#original_area','T':'#translation_area'}
     genres.map(genre => {
-        jointfunc(Areas[genre],data_to_write[genre],20000,20)
+        jointfunc(Areas[genre],data_to_write[genre],300,20)
     }
     )
 }
@@ -84,5 +84,33 @@ function created_at_filter_generator(min,max){
     return final_function
 }
 
+function change_header_with_season(header_id, season_start_day){
+    const header = document.getElementById(header_id)
+    var header_str;
+    if (header_id.includes('original')){
+        header_str = "最高分原創作品"
+    }
+    else{
+        header_str = "最高分翻譯作品"
+    }
+    if (season_start_day==undefined){
+        header.innerHTML = `${header_str}`
+        return
+    }
+
+    const date_array = season_start_day.split('-').map(d=>parseInt(d))
+    const year = date_array[0]
+    const month = date_array[1]
+    const season_dict = {
+        3 : "春",
+        6 : "夏",
+        9 : "秋",
+        12: "冬"
+    }
+    const season = season_dict[month]
+    header.innerHTML = `${header_str}<${year}年${season}>`
+}
+
 export{created_at_filter_generator}
 export{writer}
+export{change_header_with_season}

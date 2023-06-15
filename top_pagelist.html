@@ -7,8 +7,10 @@
 <script type="module" charset="utf-8">
     //相對網址會出現Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'.
     //先改為絕對網址
-    //import {writer,created_at_filter_generator} from "./github_fetcher/top_rating_pagelist.js"
-    import {writer,created_at_filter_generator} from "https://scp-zhtr.github.io/github_fetcher/top_rating_pagelist.js"
+    import {writer,created_at_filter_generator,change_header_with_season} from "./github_fetcher/top_rating_pagelist.js"
+    //import {writer,created_at_filter_generator} from "https://scp-zhtr.github.io/github_fetcher/top_rating_pagelist.js"
+    const original_header = 'original_header'
+    const translation_header = 'translation_header'
 
     let today = dayjs().hour(0).minute(0).second(0).millisecond(0)
     let season_start_day = dayjs("2019-03-01")
@@ -24,17 +26,27 @@
     const last_season = all_season_list.pop()
     const before_season_list = all_season_list.reverse()
 
-    writer(null,created_at_filter_generator(this_season[0],this_season[2]))
+
+//    change_header_with_season(original_header, this_season[0])
+//    change_header_with_season(translation_header, this_season[0])
+//    writer(null,created_at_filter_generator(this_season[0],this_season[2]))
+
+    async function combined_writer(start, end){
+        change_header_with_season(original_header, start)
+        change_header_with_season(translation_header, start)
+        await writer(null,created_at_filter_generator(start,end))
+    }
+    await combined_writer(this_season[0], this_season[2])
     
     const this_season_element = document.getElementById('this_season')
     this_season_element.addEventListener('click',async () => {
         before_season_select_element.disabled = true
-        await writer(null,created_at_filter_generator(this_season[0],this_season[2]))
+        await combined_writer(this_season[0], this_season[2])
     })
     const last_season_element = document.getElementById('last_season')
     last_season_element.addEventListener('click',async () => {
         before_season_select_element.disabled = true
-        await writer(null,created_at_filter_generator(last_season[0],last_season[2]))
+        await combined_writer(last_season[0], last_season[2])
     })
 
     const before_season_element = document.getElementById('before_season')
@@ -51,13 +63,13 @@
     }
     before_season_select_element.addEventListener('change',async () => {
         let i = Number(before_season_select_element.value)
-        await writer(null,created_at_filter_generator(before_season_list[i][0],before_season_list[i][2]))
+        await combined_writer(before_season_list[i][0],before_season_list[i][2])
     })
 
     const all_season_element = document.getElementById('all_season')
     all_season_element.addEventListener('click',async () => {
         before_season_select_element.disabled = true
-        await writer(null)
+        await combined_writer(null, null)
     })
 </script>
 <body>
@@ -70,7 +82,7 @@
         </select>
         <input type="radio" id="all_season" name="seasons"><label for="all_season">不設限</label>
     </div>
-    <h1>最高分原創作品列表</h1>
+    <h1 id="original_header">最高分原創作品列表</h1>
     <div class="to_be_panel">
     <div id="original_area">
         <div class="pager pager_wait"></div>
@@ -80,7 +92,7 @@
     </div>
     <div style="height:3em;">　　　　</div>
 
-    <h1>最高分翻譯作品列表</h1>
+    <h1 id="translation_header">最高分翻譯作品列表</h1>
     <div class="to_be_panel">
     <div id="translation_area">
         <div class="pager pager_wait"></div>
