@@ -40,7 +40,7 @@ function promiseFn(num, time = 500) {
 
   }
 
-  const raw_url_root = 'https://raw.githubusercontent.com/SCP-ZHTR/BackendStorage/main/Async'
+  const raw_url_root = 'https://raw.githubusercontent.com/SCP-ZHTR/PublicRepository/main/Async'
   var URL_DICT = {}
   var url_core
   for (const genre of ['O','T']){
