@@ -803,7 +803,6 @@ div.page-rate-widget-box .rate-points {
 .scp-image-block {
   border: solid 1px #666;
   box-shadow: 0 1px 6px rgba(0, 0, 0, .25);
-  width: 300px;
 }
 
 .scp-image-block.block-right {
@@ -825,7 +824,6 @@ div.page-rate-widget-box .rate-points {
 
 .scp-image-block img {
   border: 0;
-  width: 300px;
 }
 
 .scp-image-block .scp-image-caption {
@@ -835,7 +833,6 @@ div.page-rate-widget-box .rate-points {
   font-size: 80%;
   font-weight: bold;
   text-align: center;
-  width: 300px;
 }
 
 .scp-image-block>p {
