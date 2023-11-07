@@ -674,6 +674,7 @@ div.sexy-box div.image-container img {
 }
 .scp-image-block img {
     border: 0;
+    width: 100%;
 }
 .scp-image-block .scp-image-caption {
     background-color: #eee;
