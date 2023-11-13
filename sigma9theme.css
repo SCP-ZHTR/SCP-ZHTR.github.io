@@ -357,6 +357,10 @@ sup {
   right: 0;
 }
 
+#top-bar .mobile-top-bar>ul>li>a, #top-bar .top-bar>ul>li>a {
+  font-weight: 700;
+}
+
 /* IE7 HACK */
 #top-bar ul>li>ul {
   *margin-top: -4px;
