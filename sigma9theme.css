@@ -116,7 +116,7 @@ a:hover {
 
 body {
   background-color: #fff;
-  font-size: 0.80em;
+  font-size: 0.95em;
   color: #333;
 }
 
@@ -369,7 +369,7 @@ sup {
   position: absolute;
   top: 0.5em;
   left: 2em;
-  width: 17em;
+  width: 13.75rem;
   padding: 0;
   border: none;
   display: block;
@@ -410,7 +410,7 @@ sup {
   padding-left: 15px;
   margin-top: 10px;
   margin-bottom: 5px;
-  font-size: 8pt;
+  font-size: 0.75em;
   font-weight: bold;
 }
 
@@ -469,7 +469,7 @@ sup {
 #side-bar .collapsible-block-unfolded-link .collapsible-block-link {
   margin-top: 10px;
   margin-bottom: 5px;
-  font-size: 8pt;
+  font-size: 0.75em;
   color: #600;
 }
 
@@ -505,7 +505,7 @@ sup {
 
 /* CONTENT */
 #main-content {
-  margin: 0 2em 0 22em;
+  margin: 0 2em 0 17rem;
   padding: 1em;
   position: relative;
 }
@@ -1557,7 +1557,7 @@ table {
     position: fixed;
     top: 0;
     left: -25em;
-    width: 17em;
+    width: 13.75em;
     height: 100%;
     background-color: rgb(184, 134, 134);
     overflow-y: auto;
@@ -1582,7 +1582,7 @@ table {
   #side-bar:target {
     display: block;
     left: 0;
-    width: 17em;
+    width: 13.75rem;
     margin: 0;
     border: 1px solid #dedede;
     z-index: 10;
@@ -1607,13 +1607,13 @@ table {
 
 
 div.scpnet-interwiki-wrapper {
-  width: 17em;
+  width: 13.75rem;
   margin-left: -5px;
 }
 
 iframe.scpnet-interwiki-frame {
   height: 0;
-  width: 17em;
+  width: 13.75em;
   border: none;
 }
 

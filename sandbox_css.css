@@ -94,7 +94,7 @@ width: 95%;
  
 body {
     background-color: #fff;
-    font-size: 0.80em;
+    font-size: 0.95em;
     color: #333;
 }
 div#container-wrap {
@@ -306,7 +306,7 @@ div#container-wrap {
     position: absolute;
     top: 0.5em;
     left: 2em;
-    width: 17em;
+    width: 13.75em;
     padding: 0;
     border: none;
     display: block;
@@ -328,7 +328,7 @@ div#container-wrap {
     padding-left: 15px;
     margin-top: 10px;
     margin-bottom: 5px;
-    font-size: 8pt;
+    font-size: 0.75em;
     font-weight: bold;
 }
 #side-bar p {
@@ -375,7 +375,7 @@ div#container-wrap {
 #side-bar .collapsible-block-unfolded-link .collapsible-block-link {
     margin-top: 10px;
     margin-bottom: 5px;
-    font-size: 8pt;
+    font-size: 0.75em;
     color: #600;
 }
 #side-bar .collapsible-block-unfolded-link .collapsible-block-link:hover {
@@ -389,7 +389,7 @@ div#container-wrap {
 }
 /* CONTENT */
 #main-content {
-    margin: 0 2em 0 22em;
+    margin: 0 2em 0 17rem;
     padding: 1em;
     position: relative;
 }
@@ -1337,7 +1337,7 @@ z-index: 1;
     position: fixed;
     top: 0;
     left: -25em;
-    width: 17em;
+    width: 13.75em;
     height: 100%;
     background-color: rgb(50, 161, 142);
     overflow-y: auto;
@@ -1363,7 +1363,7 @@ z-index: 1;
 #side-bar:target {
     display: block;
     left: 0;
-    width: 17em;
+    width: 13.75em;
     margin: 0;
     border: 1px solid #dedede;
     z-index: 10;
