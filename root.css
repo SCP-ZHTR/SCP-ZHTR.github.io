@@ -2,11 +2,7 @@
     --font-display: swap;
     }
 
-:root:lang(zh){
-        /* Header */
-        --header-title: "SCP基金會";
-        --header-subtitle: "控制，收容，保護";
-   
+:root:lang(zh){   
         /* Typefaces */
         --body-font: verdana, Inter, "Temp Noto Sans TC", 微軟正黑體, "Microsoft JhengHei", "Microsoft JhengHei UI", “微軟雅黑”, "Microsoft YaHei", "Microsoft YaHei UI", sans-serif;
         --UI-font: PTRootUI, 方體, "PingFang HK", 方體, "PingFang TC", 黑體, "Heiti TC", "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto, "Noto Sans CJK TC", sans-serif;
