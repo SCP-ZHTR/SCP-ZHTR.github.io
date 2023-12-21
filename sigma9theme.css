@@ -155,6 +155,8 @@ sup {
   padding-bottom: 22px;
   /* FOR MENU */
   background: url(http://scp-zh-tr.wikidot.com/local--files/component:theme-new/logo.png) 10px 40px no-repeat;
+  background-size: 100px;
+  background-position: 10px 64%;
 }
 
 #search-top-box {
@@ -1619,6 +1621,38 @@ table {
     background: rgba(0, 0, 0, 0.3) 1px 1px repeat;
     z-index: -1;
   }
+
+  /* header area and top bar */
+  #header {
+      max-width: 90%;
+      background-size: calc(48px + 5%);
+      background-position: 8px 64%;
+  }
+
+  #header h1, #header h2 {
+      margin-left: calc(48px + 8%);
+  }
+
+  #header h1 a {
+      font-size: calc(75% + 2vw);
+  }
+
+  #search-top-box-input {
+      width: 7em;
+  }
+
+  .top-bar {
+      display: none;
+  }
+
+  .mobile-top-bar {
+      display: block;
+  }
+
+  .mobile-top-bar ul li:last-of-type ul {
+      right: 0;
+  }
+
 }
 
 
