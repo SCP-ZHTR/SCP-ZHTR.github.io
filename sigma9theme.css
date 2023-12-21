@@ -1431,59 +1431,6 @@ table {
   }
 }
 
-/* Tablet Media Query */
-@media (min-width: 768px) and (max-width: 979px) {
-  #main-content {
-    margin: 0 4em 0 20em;
-  }
-
-  #header,
-  #top-bar #side-bar {
-    max-width: 100%;
-  }
-
-  .top-bar li {
-    margin: 0;
-  }
-
-  #top-bar ul li.sfhover ul li a,
-  #top-bar ul li:hover ul li a {
-    width: 110px;
-  }
-
-  .page-options-bottom a {
-    padding: 0 7px;
-  }
-
-  #header h1 a {
-    font-size: 160%;
-  }
-
-  .license-area {
-    font-size: 0.95em;
-  }
-
-  #header {
-    background-position: 1em 4em;
-    background-size: 88px 88px;
-  }
-
-  #header h1,
-  #header h2 {
-    margin-left: 106px;
-  }
-
-  .content-panel.left-column,
-  .content-panel.right-column {
-    width: 99%;
-    float: left;
-  }
-
-  #page-content div,
-  #page-content div table {
-    clear: both;
-  }
-}
 
 /* Desktop Media Query ----------- @media (min-width: 980px) and (max-width: 1399px) {
 }
