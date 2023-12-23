@@ -102,7 +102,7 @@ function tr_listing(area,perpage){
 
 function td_organ(item, tr_ele){
     var a_part = `<a target="_blank"
-     href='http://scp-zh-tr.wikidot.com/${item['FULLNAME']}'>
+     href='https://redirect.crom.avn.sh/?url=http%3A//scp-zh-tr.wikidot.com/${item['FULLNAME']}'>
      ${item['TITLE']}
      </a>`;
     var r_part = `${item['RATING']}`;
