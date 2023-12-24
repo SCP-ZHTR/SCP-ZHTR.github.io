@@ -259,7 +259,7 @@ sup {
   text-decoration: none;
   text-shadow: 3px 3px 5px #000;
   letter-spacing: 0.9px;
-  font-family: "BauhausLTDemi", 'Sans Normalcy','Nanum Gothic', Arial,sans-serif;
+  font-family: "BauhausLTDemi", var(--UI-font), Arial,sans-serif;
 }
 
 #header h2 span {
